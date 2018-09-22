@@ -1,0 +1,168 @@
+<ngx-spinner
+  bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  color="#fff"
+  loadingText="Loading..."
+  type="ball-scale-ripple-multiple">
+</ngx-spinner>
+
+<div class="col-sm-12">
+
+  <div class="row">
+    <div class="col-lg-12">
+      <h2 class="page-header" *ngIf="currentUser.roles == 'ROLE_CLINIC'">{{'servicesComponent.headerTitle' | translate}} ({{currentUser.clinic.nameOfClinic}})</h2>
+      <h2 class="page-header" *ngIf="currentUser.roles == 'ROLE_ADMIN'">{{'servicesComponent.headerTitle' | translate}}</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2">
+      {{'servicesComponent.search.keyword' | translate}}
+      <input type="text" class="form-control" [(ngModel)]="filterValue">
+    </div>
+
+    <div class="col-md-1">
+      {{'servicesComponent.search.SortType' | translate}}
+      <select class="form-control" [(ngModel)]="sortTypeSel" name="gendersel">
+        <option *ngFor="let sf of sortType;" [value]="sf.value">{{sf.name}}</option>
+      </select>
+    </div>
+
+    <div class="col-md-2">
+      {{'servicesComponent.search.sortBased' | translate}}
+      <select class="form-control" [(ngModel)]="sortParamSel" name="gendersel">
+        <option *ngFor="let sf of sortParam;" [value]="sf.value">{{sf.name}}</option>
+      </select>
+    </div>
+
+    <div class="col-md-2">
+      {{'servicesComponent.search.searchBase' | translate}}
+      <select class="form-control" [(ngModel)]="searchFieldSel" name="gendersel">
+        <option *ngFor="let sf of searchField;" [value]="sf.value">{{sf.name}}</option>
+      </select>
+    </div>
+
+    <div class="col-md-1">
+      {{'servicesComponent.search.size' | translate}}
+      <select class="form-control" [(ngModel)]="size" name="gendersel">
+        <option *ngFor="let sz of sizeOpt;" [value]="sz.value">{{sz.value}}</option>
+      </select>
+    </div>
+
+    <div class="col-md-1">
+      <label> </label>
+      <input type="button" value="{{'servicesComponent.search.btnSearch' | translate}}"   class="form-control" (click)="searchWithFilter()"/>
+    </div>
+
+    <div class="col-md-1">
+      <label> </label>
+      <input type="button" value="{{'servicesComponent.search.all' | translate}}" class="form-control" (click)="searchWithoutFilter()"/>
+    </div>
+
+    <div class="col-md-2" *ngIf="currentUser.roles == 'ROLE_CLINIC'">
+      <label> </label>
+      <input type="button" value="{{'servicesComponent.search.newService' | translate}}" class="form-control" (click)="goToAddService()"/>
+    </div>
+
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+
+          <table class="table table-hover" *ngIf="currentUser.roles == 'ROLE_ADMIN'">
+            <tr class="btn-success">
+              <th>{{'servicesComponent.table.header.no' | translate}}</th>
+              <th>{{'servicesComponent.table.header.serviceName' | translate}}</th>
+              <th>{{'servicesComponent.table.header.serviceCode' | translate}}</th>
+              <th>{{'servicesComponent.table.header.price' | translate}}</th>
+              <th>{{'servicesComponent.table.header.statusActive' | translate}}</th>
+              <th>{{'servicesComponent.table.header.clinic' | translate}}</th>
+            </tr>
+
+            <tr *ngFor="let service of servicestListAdmin; let i = index;">
+              <td class="align-middle" *ngIf="service">{{i + 1}}</td>
+              <td class="align-middle" *ngIf="service">{{service.services.nameOfservices}}</td>
+              <td class="align-middle" *ngIf="service">{{service.services.codeOfservices}}</td>
+              <td class="align-middle" *ngIf="service">{{convertToRupiah(service.services.price)}}</td>
+              <td class="align-middle" *ngIf="service.services.statusActive == true">Active</td>
+              <td class="align-middle" *ngIf="service.services.statusActive == false">Non Active</td>
+              <td class="align-middle" *ngIf="service">{{service.clinic.nameOfClinic}}</td>
+
+            </tr>
+          </table>
+
+          <table class="table table-hover" *ngIf="currentUser.roles == 'ROLE_CLINIC'">
+            <tr class="btn-success">
+              <th>{{'servicesComponent.table.header.no' | translate}}</th>
+              <th>{{'servicesComponent.table.header.serviceName' | translate}}</th>
+              <th>{{'servicesComponent.table.header.serviceCode' | translate}}</th>
+              <th>{{'servicesComponent.table.header.price' | translate}}</th>
+              <th>{{'servicesComponent.table.header.statusActive' | translate}}</th>
+              <th>{{'servicesComponent.table.header.action' | translate}}</th>
+            </tr>
+
+            <tr *ngFor="let service of servicestList; let i = index;">
+              <td class="align-middle" *ngIf="service">{{i + 1}}</td>
+              <td class="align-middle" *ngIf="service">{{service.nameOfservices}}</td>
+              <td class="align-middle" *ngIf="service">{{service.codeOfservices}}</td>
+              <td class="align-middle" *ngIf="service">{{convertToRupiah(service.price)}}</td>
+              <td class="align-middle" *ngIf="service.statusActive == true">Active</td>
+              <td class="align-middle" *ngIf="service.statusActive == false">Non Active</td>
+              <td *ngIf="service">
+                <div class="btn-group-vertical btn-group-xs align-middle">
+                  <input type="button" value="{{'servicesComponent.table.btnAction.edit' | translate}}" class="btn btn-warning"
+                         (click)="goToEditService(service)"
+                         *ngIf="currentUser.roles == 'ROLE_ADMIN' || currentUser.roles == 'ROLE_CLINIC' || currentUser.roles == 'ROLE_NURSE'"/>
+                </div>
+                <div class="btn-group-vertical btn-group-xs align-middle">
+
+                  <input type="button" value="{{'servicesComponent.table.btnAction.delete' | translate}}" class="btn btn-danger"
+                         (click)="openModal('deleteModal',service)"
+                         *ngIf="currentUser.roles == 'ROLE_ADMIN' || currentUser.roles == 'ROLE_CLINIC' || currentUser.roles == 'ROLE_NURSE'"/>
+                </div>
+              </td>
+            </tr>
+          </table>
+
+          <div class="pull-right">
+            <input type="button" value="<<" class="btn btn-outline-success btn-sm" (click)="onClickPrevious()"/>
+            {{page+1}}/{{maxpage}}
+            <input type="button" value=">>" class="btn btn-outline-success btn-sm" (click)="onClickNext()"/>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<modal id="deleteModal" class="modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">{{'servicesComponent.modal.title' | translate}}</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" *ngIf="serviceObj">
+        <div class="panel-body">
+          <div class="col-md-12">
+            <form role="form">
+              <div><p><b> {{serviceObj.nameOfservices}} </b> {{'servicesComponent.modal.message' | translate}} </p></div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="onItemDelete()">{{'nurseComponent.modal.btnYes' | translate}}</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">{{'nurseComponent.modal.btnNo' | translate}}</button>
+      </div>
+    </div>
+  </div>
+</modal>

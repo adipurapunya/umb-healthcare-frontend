@@ -1,0 +1,96 @@
+<div class="col-sm-12">
+
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">{{'doctorEditComponent.headerTitle' | translate}} ( {{doctor.fullName}} )</h1>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="doctor">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="col-md-12">
+            <form (submit)="onEditSubmit()">
+
+              <div class="form-group">
+                <label>{{'doctorEditComponent.email' | translate}}</label>
+                <input type="text" [(ngModel)]="doctor.email" name="email" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>{{'doctorEditComponent.name' | translate}}</label>
+                <input type="text" [(ngModel)]="doctor.fullName" name="fullName" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>{{'doctorEditComponent.address' | translate}}</label>
+                <input type="text" [(ngModel)]="doctor.address" name="address" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>{{'doctorEditComponent.placeOfBirth' | translate}}</label>
+                <input type="text" [(ngModel)] = "doctor.placeBirth" name="placeBirth" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label>{{'doctorEditComponent.dateOfBirth' | translate}}</label>
+                <input type="date" [(ngModel)] = "doctor.dateBirth" name="dateBirth" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label>{{'doctorEditComponent.phoneNumber' | translate}}</label>
+                <input type="text" [(ngModel)]="doctor.phoneNumber" name="phoneNumber" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>{{'doctorEditComponent.registeredAtClinic' | translate}}</label>
+                <input type="text" [(ngModel)] = "doctor.clinic.nameOfClinic" name="clinic" class="form-control" disabled>
+              </div>
+
+              <div class="form-group">
+                <label>{{'doctorEditComponent.doctorCode' | translate}}</label>
+                <input type="text" [(ngModel)]="doctor.doctorCode" name="doctorCode" class="form-control" disabled>
+              </div>
+
+              <div class="form-group">
+                <label>{{'doctorEditComponent.specialist' | translate}}</label>
+                <input type="text" [(ngModel)]="doctor.specialist" name="specialist" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>{{'doctorEditComponent.registerNumber' | translate}}</label>
+                <input type="text" [(ngModel)]="doctor.registerNumber" name="registerNumber" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>{{'doctorEditComponent.gender' | translate}}</label>
+                <select class="form-control" [(ngModel)]="gendersel" name="gendersel">
+                  <option *ngFor="let gend of genderList;" [value]="gend.name">{{gend.name}}</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>{{'doctorEditComponent.religion' | translate}}</label>
+                <select class="form-control" [(ngModel)]="religionsel" name="religionsel">
+                  <option *ngFor="let relig of religionList;" [value]="relig.name">{{relig.name}}</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>{{'doctorEditComponent.status' | translate}}</label>
+                <select class="form-control" [(ngModel)]="statussel" name="statussel">
+                  <option *ngFor="let stat of statusList;" [value]="stat.id">{{stat.status}}</option>
+                </select>
+              </div>
+
+              <input type="submit" class="btn btn-primary" name="btnSubmit" value="{{'doctorEditComponent.btnSubmit' | translate}}">
+              <input type="submit" class="btn btn-primary" value="{{'doctorEditComponent.btnBack' | translate}}" (click)="goBackMenu()">
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

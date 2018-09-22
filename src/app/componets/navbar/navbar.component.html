@@ -1,0 +1,88 @@
+<nav class="navbar navbar-expand-xl navbar-dark bg-primary">
+
+  <div align="right">
+    <ul class="navbar-nav">
+      <li class="nav-item" [routerLinkActive] = "['active']" [routerLinkActiveOptions]= "{exact:true}"><a class="nav-link" [routerLink]="['/']">{{'navbar.home' | translate}}</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">{{'navbar.homecare' | translate}}</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" (click)="goToOurProduct()">{{'navbar.ourProduct' | translate}}</a>
+          <a class="dropdown-item" (click)="goToTeam()">{{'navbar.team' | translate}}</a>
+          <a class="dropdown-item" (click)="goToAboutUs()">{{'navbar.aboutUs' | translate}}</a>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+
+  <div class="container">
+    <a class="navbar-brand" href="#" *ngIf="authService.loggedIn()" [routerLinkActive] = "['active']" [routerLinkActiveOptions]= "{exact:true}">{{'navbar.adminPanel' | translate}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation" style="">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <!--<ul class="nav navbar-nav navbar-left mr-auto"> -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">{{'navbar.language' | translate}}</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" (click)="changeLanguage('en')">{{'navbar.listLanguage.english' | translate}}</a>
+            <a class="dropdown-item" (click)="changeLanguage('in')">{{'navbar.listLanguage.indonesia' | translate}}</a>
+            <a class="dropdown-item" (click)="changeLanguage('ch')">{{'navbar.listLanguage.chinese' | translate}}</a>
+            <a class="dropdown-item" (click)="changeLanguage('ar')">{{'navbar.listLanguage.arabic' | translate}}</a>
+          </div>
+        </li>
+      </ul>
+      <!--<ul class="nav navbar-nav navbar-right mr-auto"> -->
+      <ul class="navbar-nav">
+
+        <li class="nav-item" *ngIf="authService.loggedIn()" [routerLinkActive] = "['active']" [routerLinkActiveOptions]= "{exact:true}"> <a class="nav-link" [routerLink]="['/dashboard']">{{'navbar.dashboard' | translate}}</a></li>
+        <li class="nav-item" *ngIf="authService.loggedIn()" [routerLinkActive] = "['active']" [routerLinkActiveOptions]= "{exact:true}"> <a class="nav-link" [routerLink]="['/profile']">{{'navbar.profile' | translate}}</a></li>
+
+        <li class="nav-item" *ngIf="authService.loggedIn() &&
+        (authService.getRole() == 'ROLE_ADMIN' || authService.getRole() == 'ROLE_DOCTOR' || authService.getRole() == 'ROLE_CLINIC' || authService.getRole() == 'ROLE_NURSE')"
+            [routerLinkActive] = "['active']" [routerLinkActiveOptions]= "{exact:true}"> <a class="nav-link" [routerLink]="['/patientData']">{{'navbar.patientData' | translate}}</a></li>
+
+        <li class="nav-item" *ngIf="authService.loggedIn() &&
+        (authService.getRole() == 'ROLE_ADMIN' || authService.getRole() == 'ROLE_CLINIC' || authService.getRole() == 'ROLE_NURSE' || authService.getRole() == 'ROLE_DOCTOR' || authService.getRole() == 'ROLE_PATIENT')"
+            [routerLinkActive] = "['active']" [routerLinkActiveOptions]= "{exact:true}"> <a class="nav-link" [routerLink]="['/transaction']">{{'navbar.transaction' | translate}}</a></li>
+
+        <li class="nav-item" *ngIf="authService.loggedIn() &&
+        (authService.getRole() == 'ROLE_ADMIN' || authService.getRole() == 'ROLE_CLINIC')"
+            [routerLinkActive] = "['active']" [routerLinkActiveOptions]= "{exact:true}"> <a class="nav-link" [routerLink]="['/doctorData']">{{'navbar.doctorData' | translate}}</a></li>
+
+        <li class="nav-item" *ngIf="authService.loggedIn() &&
+        (authService.getRole() == 'ROLE_ADMIN' || authService.getRole() == 'ROLE_CLINIC')"
+            [routerLinkActive] = "['active']" [routerLinkActiveOptions]= "{exact:true}"> <a class="nav-link" [routerLink]="['/nurseData']">{{'navbar.nurseData' | translate}}</a></li>
+
+        <li class="nav-item" *ngIf="authService.loggedIn() &&
+        (authService.getRole() == 'ROLE_ADMIN')"
+            [routerLinkActive] = "['active']" [routerLinkActiveOptions]= "{exact:true}"> <a class="nav-link" [routerLink]="['/clinicData']">{{'navbar.clinicData' | translate}}</a></li>
+
+
+        <li class="nav-item" *ngIf="authService.loggedIn() &&
+        (authService.getRole() == 'ROLE_PATIENT')"
+            [routerLinkActive] = "['active']" [routerLinkActiveOptions]= "{exact:true}"> <a class="nav-link" [routerLink]="['/ecgData']" >{{'navbar.ecgData' | translate}}</a></li>
+
+        <li class="nav-item" *ngIf="authService.loggedIn() &&
+        (authService.getRole() == 'ROLE_ADMIN' || authService.getRole() == 'ROLE_CLINIC')"
+            [routerLinkActive] = "['active']" [routerLinkActiveOptions]= "{exact:true}"> <a class="nav-link" [routerLink]="['/services']" >{{'navbar.services' | translate}}</a></li>
+
+
+        <li class="nav-item" *ngIf="!authService.loggedIn()" [routerLinkActive] = "['active']" [routerLinkActiveOptions]= "{exact:true}"> <a class="nav-link" [routerLink]="['/login']">{{'navbar.login' | translate}}</a></li>
+        <li class="nav-item" *ngIf="!authService.loggedIn()" [routerLinkActive] = "['active']" [routerLinkActiveOptions]= "{exact:true}"> <a class="nav-link" [routerLink]="['/register']">{{'navbar.register' | translate}}</a></li>
+        <li class="nav-item" *ngIf="authService.loggedIn()"><a class="nav-link" (click)="onLogoutClick()" href="#">{{'navbar.logout' | translate}}</a></li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <div align="right">
+    <ul class="navbar-nav">
+      <li class="nav-link" *ngIf="authService.loggedIn()" [routerLinkActive] = "['active']" [routerLinkActiveOptions]= "{exact:true}"><b>{{authService.getRole()}}</b></li>
+    </ul>
+  </div>
+
+</nav>

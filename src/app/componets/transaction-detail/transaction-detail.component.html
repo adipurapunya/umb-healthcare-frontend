@@ -1,0 +1,393 @@
+<div class="col-sm-12" *ngIf="trx">
+
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">{{'trxDetailsComponent.headerTitle' | translate}} ({{trx.orderNumber}})</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <table class="table table-hover">
+
+            <tr>
+              <td class="align-middle" width="250">{{'trxDetailsComponent.orderNumber' | translate}}</td>
+              <td class="align-middle">{{trx.orderNumber}}</td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'trxDetailsComponent.patientName' | translate}}</td>
+              <td class="align-middle">{{trx.userPatient.fullName}}</td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'trxDetailsComponent.patientCode' | translate}}</td>
+              <td class="align-middle">{{trx.userPatient.patientCode}}</td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'trxDetailsComponent.dateOrderIn' | translate}}</td>
+              <td class="align-middle">{{convertDateTime(trx.dateOrderIn)}}</td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'trxDetailsComponent.addressToVisit' | translate}}</td>
+              <td class="align-middle">{{trx.addressToVisit}}</td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'trxDetailsComponent.clinic' | translate}}</td>
+              <td class="align-middle">{{trx.idClinic.nameOfClinic}}</td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'trxDetailsComponent.status' | translate}}</td>
+              <td class="align-middle">
+                <div *ngIf="trx.transactionStatusId">
+                  <label *ngIf="trx.transactionStatusId.id ==6"
+                         class="btn-xs btn-success"> {{trx.transactionStatusId.status}}</label>
+                  <label *ngIf="trx.transactionStatusId.id >=3 && trx.transactionStatusId.id <=5"
+                         class="btn-xs btn-danger"> {{trx.transactionStatusId.status}}</label>
+                  <label *ngIf="trx.transactionStatusId.id <=2"
+                         class="btn-xs btn-warning"> {{trx.transactionStatusId.status}}</label>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'trxDetailsComponent.dateTreatment' | translate}}</td>
+              <td class="align-middle">{{convertDateTime(trx.dateTreatementStart)}}</td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'trxDetailsComponent.predictionPrice' | translate}}</td>
+              <td class="align-middle">{{convertToRupiah(trx.predictionPrice)}}</td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'trxDetailsComponent.fixedPrice' | translate}}</td>
+              <td class="align-middle">{{convertToRupiah(trx.fixedPrice)}}</td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'trxDetailsComponent.paymentFixedPriceStatus' | translate}}</td>
+              <td class="align-middle">
+                <div *ngIf="trx.paymentFixedPriceStatusId">
+                  <label *ngIf="trx.paymentFixedPriceStatusId.id == 1"
+                         class="btn-xs btn-success"> {{trx.paymentFixedPriceStatusId.status}}</label>
+                  <label *ngIf="trx.paymentFixedPriceStatusId.id == 2 "
+                         class="btn-xs btn-danger"> {{trx.paymentFixedPriceStatusId.status}}</label>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'trxDetailsComponent.transactionType' | translate}}</td>
+              <td class="align-middle">{{trx.transactionTypeId.type}}</td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'trxDetailsComponent.medicine' | translate}}</td>
+              <td class="align-middle">{{trx.medicine}}</td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'trxDetailsComponent.nurseAction' | translate}}</td>
+              <td class="align-middle">{{trx.nurseAction}}</td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'trxDetailsComponent.diagnosis' | translate}}</td>
+              <td class="align-middle">{{trx.diagnosis}}</td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'trxDetailsComponent.listOfNurse' | translate}}</td>
+              <td class="align-middle">
+                <label class="btn btn-info" (click)="openModalNurse('detailNurse',trx)">{{'trxDetailsComponent.btnSeeNurse' | translate}}</label>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'trxDetailsComponent.listOfDoctor' | translate}}</td>
+              <td class="align-middle">
+                <label class="btn btn-info" (click)="openModalDoctor('detailDoctor',trx)">{{'trxDetailsComponent.btnSeeDoctor' | translate}}</label>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'trxDetailsComponent.listOfServices' | translate}}</td>
+              <td class="align-middle">
+                <label class="btn btn-info" (click)="openModalServices('detailServices',trx)">{{'trxDetailsComponent.btnSeeServices' | translate}}</label>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'trxDetailsComponent.listOfVitalSign' | translate}}</td>
+              <td class="align-middle">
+                <label class="btn btn-info" (click)="openModalVitalSign('detailVitalSign',trx)">{{'trxDetailsComponent.btnSeeVitalSign' | translate}}</label>
+                <label class="btn btn-info" (click)="openModalVitalSignInput('inputVitalSign',trx)">{{'trxDetailsComponent.btnInputVitalSign' | translate}}</label>
+              </td>
+            </tr>
+
+          </table>
+
+          <input type="submit" class="btn btn-primary" value="{{'trxDetailsComponent.btnBack' | translate}}" (click)="goBackMenu()">
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<modal id="detailNurse" class="modal">
+  <div class="modal-form" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">{{'trxDetailsComponent.modal.titleNurse' | translate}}</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" *ngIf="trxNurse">
+        <div class="panel-body">
+          <div class="col-md-12">
+            <table class="table table-hover">
+              <tr class="btn-success">
+                <th>{{'trxDetailsComponent.modal.table.number' | translate}}</th>
+                <th>{{'trxDetailsComponent.modal.table.name' | translate}}</th>
+                <th>{{'trxDetailsComponent.modal.table.address' | translate}}</th>
+                <th>{{'trxDetailsComponent.modal.table.phoneNumber' | translate}}</th>
+                <th>{{'trxDetailsComponent.modal.table.licenseNumber' | translate}}</th>
+              </tr>
+              <tr *ngFor="let nurse of trxNurse; let i = index;">
+                <td class="align-middle" *ngIf="nurse">{{i + 1}}</td>
+                <td class="align-middle" *ngIf="nurse">{{nurse.idNurse.fullName}}</td>
+                <td class="align-middle" *ngIf="nurse">{{nurse.idNurse.address}}</td>
+                <td class="align-middle" *ngIf="nurse">{{nurse.idNurse.phoneNumber}}</td>
+                <td class="align-middle" *ngIf="nurse">{{nurse.idNurse.sipp}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">{{'trxDetailsComponent.modal.btnClose' | translate}}</button>
+      </div>
+    </div>
+  </div>
+</modal>
+
+<modal id="detailDoctor" class="modal">
+  <div class="modal-form" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">{{'trxDetailsComponent.modal.titleDoctor' | translate}}</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" *ngIf="trxDoctor">
+        <div class="panel-body">
+          <div class="col-md-12">
+            <table class="table table-hover">
+              <tr class="btn-success">
+                <th>{{'trxDetailsComponent.modal.table.number' | translate}}</th>
+                <th>{{'trxDetailsComponent.modal.table.name' | translate}}</th>
+                <th>{{'trxDetailsComponent.modal.table.address' | translate}}</th>
+                <th>{{'trxDetailsComponent.modal.table.phoneNumber' | translate}}</th>
+                <th>{{'trxDetailsComponent.modal.table.licenseNumber' | translate}}</th>
+                <th>{{'trxDetailsComponent.modal.table.specialist' | translate}}</th>
+              </tr>
+              <tr *ngFor="let doctor of trxDoctor; let i = index;">
+                <td class="align-middle" *ngIf="doctor">{{i + 1}}</td>
+                <td class="align-middle" *ngIf="doctor">{{doctor.idDoctor.fullName}}</td>
+                <td class="align-middle" *ngIf="doctor">{{doctor.idDoctor.address}}</td>
+                <td class="align-middle" *ngIf="doctor">{{doctor.idDoctor.phoneNumber}}</td>
+                <td class="align-middle" *ngIf="doctor">{{doctor.idDoctor.registerNumber}}</td>
+                <td class="align-middle" *ngIf="doctor">{{doctor.idDoctor.specialist}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">{{'trxDetailsComponent.modal.btnClose' | translate}}</button>
+      </div>
+    </div>
+  </div>
+</modal>
+
+<modal id="detailServices" class="modal">
+  <div class="modal-form" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">{{'trxDetailsComponent.modal.titleServices' | translate}}</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" *ngIf="trxServices">
+        <div class="panel-body">
+          <div class="col-md-12">
+            <table class="table table-hover">
+              <tr class="btn-success">
+                <th>{{'trxDetailsComponent.modal.table.number' | translate}}</th>
+                <th>{{'trxDetailsComponent.modal.table.name' | translate}}</th>
+                <th>{{'trxDetailsComponent.modal.table.price' | translate}}</th>
+                <th>{{'trxDetailsComponent.modal.table.code' | translate}}</th>
+              </tr>
+              <tr *ngFor="let service of trxServices; let i = index;">
+                <td class="align-middle" *ngIf="service">{{i + 1}}</td>
+                <td class="align-middle" *ngIf="service">{{service.services.nameOfservices}}</td>
+                <td class="align-middle" *ngIf="service">{{convertToRupiah(service.services.price)}}</td>
+                <td class="align-middle" *ngIf="service">{{service.services.codeOfservices}}</td>
+              </tr>
+              <tr class="btn-info">
+                <td colspan="2">{{'trxDetailsComponent.modal.table.total' | translate}}</td>
+                <td colspan="2" *ngIf="totalPrice">{{convertToRupiah(totalPrice)}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">{{'trxDetailsComponent.modal.btnClose' | translate}}</button>
+      </div>
+    </div>
+  </div>
+</modal>
+
+
+
+<modal id="detailVitalSign" class="modal">
+  <div class="modal-form" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">{{'trxDetailsComponent.modal.titleVitalSign' | translate}}</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="panel-body">
+          <div class="col-md-12">
+            <table class="table table-hover">
+              <tr class="btn-success">
+                <th>{{'trxDetailsComponent.modal.table.sistol' | translate}}</th>
+                <th>{{'trxDetailsComponent.modal.table.diastol' | translate}}</th>
+                <th>{{'trxDetailsComponent.modal.table.temperature' | translate}}</th>
+                <th>{{'trxDetailsComponent.modal.table.heartBeat' | translate}}</th>
+                <th>{{'trxDetailsComponent.modal.table.pulseOximetry' | translate}}</th>
+                <th>{{'trxDetailsComponent.modal.table.respiratory' | translate}}</th>
+              </tr>
+              <tr>
+                <td class="align-middle" *ngIf="trxVitalSign">{{trxVitalSign.sistol}}</td>
+                <td class="align-middle" *ngIf="trxVitalSign">{{trxVitalSign.diastol}}</td>
+                <td class="align-middle" *ngIf="trxVitalSign">{{trxVitalSign.temperature}}</td>
+                <td class="align-middle" *ngIf="trxVitalSign">{{trxVitalSign.heartBeat}}</td>
+                <td class="align-middle" *ngIf="trxVitalSign">{{trxVitalSign.pulseOximetry}}</td>
+                <td class="align-middle" *ngIf="trxVitalSign">{{trxVitalSign.respiratory}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">{{'trxDetailsComponent.modal.btnClose' | translate}}</button>
+      </div>
+    </div>
+  </div>
+</modal>
+
+
+<modal id="inputVitalSign" class="modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">{{'trxDetailsComponent.modal.titleInputVitalSign' | translate}}</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="panel-body">
+
+          <div class="row">
+            <div class="col-md-6">
+              <label class="form-text">{{'trxDetailsComponent.modal.table.sistol' | translate}}</label>
+            </div>
+            <div class="col-md-6">
+              <input type="text" [(ngModel)]="trxVitalSignInput.sistol" name="sistol" class="form-control" >
+            </div>
+          </div>
+
+          <br>
+
+          <div class="row">
+            <div class="col-md-6">
+              <label class="form-text">{{'trxDetailsComponent.modal.table.diastol' | translate}}</label>
+            </div>
+            <div class="col-md-6">
+              <input type="text" [(ngModel)]="trxVitalSignInput.diastol" name="diastol" class="form-control" >
+            </div>
+          </div>
+
+          <br>
+
+          <div class="row">
+            <div class="col-md-6">
+              <label class="form-text">{{'trxDetailsComponent.modal.table.temperature' | translate}}</label>
+            </div>
+            <div class="col-md-6">
+              <input type="text" [(ngModel)]="trxVitalSignInput.temperature" name="temperature" class="form-control" >
+            </div>
+          </div>
+
+          <br>
+
+          <div class="row">
+            <div class="col-md-6">
+              <label class="form-text">{{'trxDetailsComponent.modal.table.heartBeat' | translate}}</label>
+            </div>
+            <div class="col-md-6">
+              <input type="text" [(ngModel)]="trxVitalSignInput.heartBeat" name="heartBeat" class="form-control" >
+            </div>
+          </div>
+
+
+          <br>
+
+          <div class="row">
+            <div class="col-md-6">
+              <label class="form-text">{{'trxDetailsComponent.modal.table.respiratory' | translate}}</label>
+            </div>
+            <div class="col-md-6">
+              <input type="text" [(ngModel)]="trxVitalSignInput.respiratory" name="respiratory" class="form-control" >
+            </div>
+          </div>
+
+          <br>
+
+          <div class="row">
+            <div class="col-md-6">
+              <label class="form-text">{{'trxDetailsComponent.modal.table.pulseOximetry' | translate}}</label>
+            </div>
+            <div class="col-md-6">
+              <input type="text" [(ngModel)]="trxVitalSignInput.pulseOximetry" name="pulseOximetry" class="form-control" >
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="onInput()">{{'trxDetailsComponent.modal.btnInput' | translate}}</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">{{'trxDetailsComponent.modal.btnClose' | translate}}</button>
+      </div>
+    </div>
+  </div>
+</modal>

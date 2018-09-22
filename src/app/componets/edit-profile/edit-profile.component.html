@@ -1,0 +1,124 @@
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">{{'editProfileComponet.headerTitle' | translate}}</h1>
+    </div>
+  </div>
+
+<div class="row" *ngIf="user">
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="col-md-12">
+            <form (submit)="onEditSubmit()">
+
+              <div class="form-group">
+                <label>{{'editProfileComponet.email' | translate}}</label>
+                <input type="text" [(ngModel)]="user.email" name="email" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>{{'editProfileComponet.name' | translate}}</label>
+                <input type="text" [(ngModel)]="user.fullName" name="fullName" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>{{'editProfileComponet.address' | translate}}</label>
+                <input type="text" [(ngModel)]="user.address" name="address" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>{{'editProfileComponet.placeOfBirth' | translate}}</label>
+                <input type="text" [(ngModel)] = "user.placeBirth" name="placeBirth" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label>{{'editProfileComponet.dateOfBirth' | translate}}</label>
+                <input type="date" [(ngModel)] = "user.dateBirth" name="dateBirth" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label>{{'editProfileComponet.phoneNumber' | translate}}</label>
+                <input type="text" [(ngModel)]="user.phoneNumber" name="phoneNumber" class="form-control" >
+              </div>
+
+              <div class="form-group" *ngIf="user.roles != 'ROLE_ADMIN'">
+                <label>{{'editProfileComponet.registeredAtClinic' | translate}}</label>
+                <input type="text" [(ngModel)] = "user.clinic.nameOfClinic" name="clinic" class="form-control" disabled>
+              </div>
+
+              <div class="form-group" *ngIf="user.roles=='ROLE_ADMIN'">
+                <label>{{'editProfileComponet.adminCode' | translate}}</label>
+                <input type="text" [(ngModel)]="user.adminCode" name="adminCode" class="form-control" disabled>
+              </div>
+
+              <div class="form-group" *ngIf="user.roles=='ROLE_CLINIC'">
+                <label>{{'editProfileComponet.userCode' | translate}}</label>
+                <input type="text" [(ngModel)]="user.userCode" name="userCode" class="form-control" disabled>
+              </div>
+
+              <div class="form-group" *ngIf="user.roles=='ROLE_PATIENT'">
+                <label>{{'editProfileComponet.ecgCode' | translate}}</label>
+                <input type="text" [(ngModel)]="user.deviceCode" name="deviceCode" class="form-control" disabled>
+              </div>
+
+              <div class="form-group" *ngIf="user.roles=='ROLE_NURSE'">
+                <label>{{'editProfileComponet.nurseCode' | translate}}</label>
+                <input type="text" [(ngModel)]="user.nurseCode" name="nurseCode" class="form-control" disabled>
+              </div>
+
+              <div class="form-group" *ngIf="user.roles=='ROLE_DOCTOR'">
+                <label>{{'editProfileComponet.doctorCode' | translate}}</label>
+                <input type="text" [(ngModel)]="user.doctorCode" name="doctorCode" class="form-control" disabled>
+              </div>
+
+              <div class="form-group" *ngIf="user.roles=='ROLE_PATIENT'">
+                <label>{{'editProfileComponet.patientCode' | translate}}</label>
+                <input type="text" [(ngModel)]="user.patientCode" name="patientCode" class="form-control" disabled>
+              </div>
+
+              <div class="form-group" *ngIf="user.roles=='ROLE_NURSE'">
+                <label>{{'editProfileComponet.sipp' | translate}}</label>
+                <input type="text" [(ngModel)]="user.sipp" name="sipp" class="form-control" >
+              </div>
+
+              <div class="form-group" *ngIf="user.roles=='ROLE_DOCTOR'">
+                <label>{{'editProfileComponet.doctorRegisterNumber' | translate}}</label>
+                <input type="text" [(ngModel)]="user.registerNumber" name="registerNumber" class="form-control" >
+              </div>
+
+              <div class="form-group" *ngIf="user.roles=='ROLE_DOCTOR'">
+                <label>{{'editProfileComponet.specialist' | translate}}</label>
+                <input type="text" [(ngModel)]="user.specialist" name="specialist" class="form-control" >
+              </div>
+
+              <div class="form-group" *ngIf="user.roles=='ROLE_PATIENT'">
+                <label>{{'editProfileComponet.occupation' | translate}}</label>
+                <input type="text" [(ngModel)]="user.occupation" name="occupation" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>{{'editProfileComponet.gender' | translate}}</label>
+                <select class="form-control" [(ngModel)]="gendersel" name="gendersel">
+                  <option *ngFor="let gend of genderList;" [value]="gend.name">{{gend.name}}</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>{{'editProfileComponet.religion' | translate}}</label>
+                <select class="form-control" [(ngModel)]="religionsel" name="religionsel">
+                  <option *ngFor="let relig of religionList;" [value]="relig.name">{{relig.name}}</option>
+                </select>
+              </div>
+
+              <input type="submit" class="btn btn-primary" name="btnSubmit" value="{{'editProfileComponet.btnSubmit' | translate}}">
+              <input type="submit" class="btn btn-primary" value="{{'editProfileComponet.btnBack' | translate}}" (click)="goBackMenu()">
+
+            </form>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+</div>

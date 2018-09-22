@@ -1,0 +1,708 @@
+{
+  "navbar" : {
+    "adminPanel" : "Admin Panel",
+    "home" : "Home",
+    "language" : "Language",
+    "listLanguage" : {
+      "english" : "English",
+      "indonesia" : "Bahasa Indonesia",
+      "chinese" : "Chinese (中文)",
+      "arabic" : "Arabic (العربية)"
+    },
+    "profile" : "Profile",
+    "patientData" : "Patient Data",
+    "transaction" : "Trx",
+    "doctorData" : "Doctor Data",
+    "nurseData" : "Nurse Data",
+    "clinicData" : "Clinic Data",
+    "ecgData": "ECG Data",
+    "logout" : "Logout",
+    "login" : "Login",
+    "register" : "Create Account",
+    "dashboard" : "Dashboard",
+    "services": "Services",
+    "homecare" : "Homecare",
+    "team" : "Team",
+    "aboutUs" : "About Us",
+    "ourProduct" : "Our Product"
+  },
+  "patientComponent" : {
+    "headingTitle" : "Patient Data",
+    "search" : {
+      "keyword" : "Keyword",
+      "SortType" : "Sort Type",
+      "sortBased" : "Sort Based",
+      "searchBase" : "Search Based",
+      "size" : "Size Per Page",
+      "btnSearch" : "Search",
+      "all" : "All",
+      "newPatient" : "New Patient"
+    },
+    "table" : {
+      "header" : {
+        "no" : "No",
+        "patientCode" : "Patient Code",
+        "palceDOB" : "Place and DOB",
+        "gender" : "Gender",
+        "email" : "Email",
+        "occupation" : "Occupation",
+        "ecgCode" : "ECG Code",
+        "clinic" : "Clinic",
+        "action" : "Action",
+        "name" : "Name"
+      },
+      "btnAction" : {
+        "detail" : "Detail",
+        "edit" : "Edit",
+        "delete" : "Delete",
+        "ecg" : "Ecg"
+      }
+    },
+    "modal" : {
+      "title" : "Delete Patient",
+      "message"  : " will be deleted, Are you sure want to delete this patient from patient list ?",
+      "btnYes" : "Yes",
+      "btnNo" : "No"
+    }
+  },
+  "doctorComponent" : {
+    "headingTitle" : "Doctor Data",
+    "search" : {
+      "keyword" : "Keyword",
+      "SortType" : "Sort Type",
+      "sortBased" : "Sort Based",
+      "searchBase" : "Search Based",
+      "size" : "Size Per Page",
+      "btnSearch" : "Search",
+      "all" : "All",
+      "newDoctor" : "New Doctor"
+    },
+    "table" : {
+      "header" : {
+        "no" : "No",
+        "doctorCode" : "Doctor Code",
+        "palceDOB" : "Place and DOB",
+        "gender" : "Gender",
+        "email" : "Email",
+        "registerNumber" : "Register Number",
+        "clinic" : "Clinic",
+        "action" : "Action",
+        "name" : "Name"
+      },
+      "btnAction" : {
+        "detail" : "Detail",
+        "edit" : "Edit",
+        "delete" : "Delete"
+      }
+    },
+    "modal" : {
+      "title" : "Delete Doctor",
+      "message"  : " will be deleted, Are you sure want to delete this doctor from doctor list ?",
+      "btnYes" : "Yes",
+      "btnNo" : "No"
+    }
+  },
+  "profileComponent" : {
+    "headingTitle" : "Your Profile",
+    "table" : {
+      "email" : "Email",
+      "name" : "Name",
+      "address" : "Address",
+      "placeOfBirth" : "Place Of Birth",
+      "dateOfBirth" : "Date Of Birth",
+      "phoneNumber" : "Phone Number",
+      "adminCode" : "Admin Code",
+      "patientCode" : "Patient Code",
+      "nurseCode" : "Nurse Code",
+      "doctorCode" : "Doctor Code",
+      "userCode" : "User Code",
+      "gender" : "Gender",
+      "religion" : "Religion",
+      "status" : "Status",
+      "registrationDate" : "Registration Date",
+      "role" : "Role",
+      "sipp" : "Nurse License Number",
+      "ecgCode" : "Ecg Code",
+      "registeredAtClinic" : "Registered at Clinic",
+      "specialist" : "Specialist",
+      "doctorRegisterNumber" : "Doctor Register Number",
+      "occupation" : "Occupation"
+    },
+    "button" : {
+      "changeData" : "Change Data",
+      "changePassword" : "Change Password"
+    }
+  },
+  "loginComponent" :{
+    "headerTitle" : "Login",
+    "email" : "Email",
+    "password" : "Password",
+    "role" : "Login as (Role)",
+    "btnLogin" : "Login"
+  },
+  "footerComponent" : {
+    "name" : "Home Care Digital Medical System"
+  },
+  "registerComponent" : {
+    "headerTitle" : "Create Account Form",
+    "name" : "Name",
+    "email" : "Email",
+    "password" : "Password",
+    "role" : "Register as (Role)",
+    "atClinic" : "At Clinic",
+    "linkAtClinic" : "click here to Register for Clinic/Hospital",
+    "verificationCode" : "Verification Code",
+    "btnSubmit" : "Submit"
+  },
+  "homeComponent" : {
+    "header": "Home Care Digital Medical System",
+    "btnRegister" : "Register",
+    "btnLogin" : "Login",
+    "column1" : {
+      "title" : "Online Medical Record",
+      "content" : "Online Medical Records that can be accessed from anywhere (from website and smart phone)"
+    },
+    "column2" : {
+      "title" : "Real time ECG ",
+      "content" : "Allows to monitor ecg in real time 24 hours by using small ECG device embedded on your dress"
+    },
+    "column3" : {
+      "title" : "Cooperation UM Bandung & ITB",
+      "content" : "This research is a collaboration between two universities, namely Muhamadiyah University of Bandung (UMB) and Institut Teknologi Bandung (ITB)"
+    }
+  },
+  "dashboardComponent" : {
+    "headerTitle" : "Dashboard",
+    "message" : "Welcome to your dashboard and you can manage in accordance with your role !"
+  },
+  "editProfileComponet" : {
+    "headerTitle" : "Edit Your Profile Data",
+    "email" : "Email",
+    "name" : "Name",
+    "address" : "Address",
+    "placeOfBirth" : "Place Of Birth",
+    "dateOfBirth" : "Date Of Birth",
+    "phoneNumber" : "Phone Number",
+    "adminCode" : "Admin Code",
+    "patientCode" : "Patient Code",
+    "nurseCode" : "Nurse Code",
+    "doctorCode" : "Doctor Code",
+    "userCode" : "User Code",
+    "gender" : "Gender",
+    "religion" : "Religion",
+    "status" : "Status",
+    "registrationDate" : "Registration Date",
+    "role" : "Role",
+    "sipp" : "Nurse License Number",
+    "ecgCode" : "Ecg Code",
+    "registeredAtClinic" : "Registered at Clinic",
+    "specialist" : "Specialist",
+    "doctorRegisterNumber" : "Doctor Register Number",
+    "occupation" : "Occupation",
+    "btnSubmit" : "Submit",
+    "btnBack" : "Back"
+  },
+  "editPasswordComponent" : {
+    "headerTitle" : "Edit Your Password",
+    "oldPassword" : "Old Password",
+    "newPassword" : "New Password",
+    "reTypePassword" : "Re-type New Password",
+    "btnSubmit" : "Submit",
+    "btnBack" : "Back"
+  },
+  "patientDetailsComponent" : {
+    "headerTitle" : "Patient Details",
+    "email" : "Email",
+    "name" : "Name",
+    "address" : "Address",
+    "placeAndDateOfBirth" : "Place and DOB",
+    "phoneNumber" : "Phone Number",
+    "patientCode" : "Patient Code",
+    "gender" : "Gender",
+    "religion" : "Religion",
+    "status" : "Status",
+    "registrationDate" : "First Registration Date",
+    "role" : "Role",
+    "ecgCode" : "Ecg Code",
+    "registeredAtClinic" : "Registered at Clinic",
+    "occupation" : "Occupation",
+    "btnBack" : "Back"
+  },
+  "patientEditComponent" : {
+    "headerTitle" : "Edit Patient",
+    "email" : "Email",
+    "name" : "Name",
+    "address" : "Address",
+    "placeOfBirth" : "Place Of Birth",
+    "dateOfBirth" : "Date Of Birth",
+    "phoneNumber" : "Phone Number",
+    "patientCode" : "Patient Code",
+    "gender" : "Gender",
+    "religion" : "Religion",
+    "status" : "Status",
+    "ecgCode" : "Ecg Code",
+    "registeredAtClinic" : "Registered at Clinic",
+    "occupation" : "Occupation",
+    "btnSubmit" : "Submit",
+    "btnBack" : "Back"
+  },
+  "patientAddComponent" : {
+    "headerTitle" : "Add New Patient",
+    "email" : "Email",
+    "name" : "Name",
+    "address" : "Address",
+    "placeOfBirth" : "Place Of Birth",
+    "dateOfBirth" : "Date Of Birth",
+    "phoneNumber" : "Phone Number",
+    "patientCode" : "Patient Code",
+    "gender" : "Gender",
+    "religion" : "Religion",
+    "status" : "Status",
+    "ecgCode" : "Ecg Code",
+    "registeredAtClinic" : "Registered at Clinic",
+    "occupation" : "Occupation",
+    "btnSubmit" : "Add",
+    "btnBack" : "Back",
+    "password" : "Password"
+  },
+  "doctorDetailsComponent" : {
+    "headerTitle" : "Doctor Details",
+    "email" : "Email",
+    "name" : "Name",
+    "address" : "Address",
+    "placeAndDateOfBirth" : "Place and DOB",
+    "phoneNumber" : "Phone Number",
+    "doctorCode" : "Doctor Code",
+    "gender" : "Gender",
+    "religion" : "Religion",
+    "status" : "Status",
+    "registrationDate" : "First Registration Date",
+    "role" : "Role",
+    "registerNumber" : "Register Number",
+    "registeredAtClinic" : "Registered at Clinic",
+    "specialist" : "Specialist",
+    "btnBack" : "Back"
+  },
+  "doctorEditComponent" : {
+    "headerTitle" : "Edit Doctor",
+    "email" : "Email",
+    "name" : "Name",
+    "address" : "Address",
+    "placeOfBirth" : "Place Of Birth",
+    "dateOfBirth" : "Date Of Birth",
+    "phoneNumber" : "Phone Number",
+    "doctorCode" : "Doctor Code",
+    "gender" : "Gender",
+    "religion" : "Religion",
+    "status" : "Status",
+    "specialist" : "Specialist",
+    "registeredAtClinic" : "Registered at Clinic",
+    "registerNumber" : "Register Number",
+    "btnSubmit" : "Submit",
+    "btnBack" : "Back"
+  },
+  "nurseComponent" : {
+    "headingTitle" : "Nurse Data",
+    "search" : {
+      "keyword" : "Keyword",
+      "SortType" : "Sort Type",
+      "sortBased" : "Sort Based",
+      "searchBase" : "Search Based",
+      "size" : "Size Per Page",
+      "btnSearch" : "Search",
+      "all" : "All",
+      "newNurse" : "New Nurse"
+    },
+    "table" : {
+      "header" : {
+        "no" : "No",
+        "nurseCode" : "Nurse Code",
+        "palceDOB" : "Place and DOB",
+        "gender" : "Gender",
+        "email" : "Email",
+        "sipp" : "SIPP",
+        "clinic" : "Clinic",
+        "action" : "Action",
+        "name" : "Name"
+      },
+      "btnAction" : {
+        "detail" : "Detail",
+        "edit" : "Edit",
+        "delete" : "Delete"
+      }
+    },
+    "modal" : {
+      "title" : "Delete Nurse",
+      "message"  : " will be deleted, Are you sure want to delete this nurse from nurse list ?",
+      "btnYes" : "Yes",
+      "btnNo" : "No"
+    }
+  },
+  "nurseDetailsComponent" : {
+    "headerTitle" : "Nurse Details",
+    "email" : "Email",
+    "name" : "Name",
+    "address" : "Address",
+    "placeAndDateOfBirth" : "Place and DOB",
+    "phoneNumber" : "Phone Number",
+    "nurseCode" : "Nurse Code",
+    "gender" : "Gender",
+    "religion" : "Religion",
+    "status" : "Status",
+    "registrationDate" : "First Registration Date",
+    "role" : "Role",
+    "sipp" : "SIPP",
+    "registeredAtClinic" : "Registered at Clinic",
+    "btnBack" : "Back"
+  },
+  "nurseEditComponent" : {
+    "headerTitle" : "Edit Nurse",
+    "email" : "Email",
+    "name" : "Name",
+    "address" : "Address",
+    "placeOfBirth" : "Place Of Birth",
+    "dateOfBirth" : "Date Of Birth",
+    "phoneNumber" : "Phone Number",
+    "nurseCode" : "Nurse Code",
+    "gender" : "Gender",
+    "religion" : "Religion",
+    "status" : "Status",
+    "registeredAtClinic" : "Registered at Clinic",
+    "sipp" : "SIPP",
+    "btnSubmit" : "Submit",
+    "btnBack" : "Back"
+  },
+  "clinicComponent" : {
+    "headingTitle" : "Clinic Data",
+    "search" : {
+      "keyword" : "Keyword",
+      "SortType" : "Sort Type",
+      "sortBased" : "Sort Based",
+      "searchBase" : "Search Based",
+      "size" : "Size Per Page",
+      "btnSearch" : "Search",
+      "all" : "All",
+      "newClinic" : "New Clinic"
+    },
+    "table" : {
+      "header" : {
+        "no" : "No",
+        "userCode" : "User Clinic Code",
+        "palceDOB" : "Place and DOB",
+        "gender" : "Gender",
+        "email" : "Email",
+        "clinic" : "Clinic",
+        "action" : "Action",
+        "name" : "Name"
+      },
+      "btnAction" : {
+        "detail" : "Detail",
+        "edit" : "Edit",
+        "delete" : "Delete"
+      }
+    },
+    "modal" : {
+      "title" : "Delete User Clinic",
+      "message"  : " will be deleted, Are you sure want to delete this user from user list ?",
+      "btnYes" : "Yes",
+      "btnNo" : "No"
+    }
+  },
+  "clinicDetailsComponent" : {
+    "headerTitle" : "User Clinic Details",
+    "email" : "Email",
+    "name" : "Name",
+    "address" : "Address",
+    "placeAndDateOfBirth" : "Place and DOB",
+    "phoneNumber" : "Phone Number",
+    "userCode" : "User Code",
+    "gender" : "Gender",
+    "religion" : "Religion",
+    "status" : "Status",
+    "registrationDate" : "First Registration Date",
+    "role" : "Role",
+    "registeredAtClinic" : "Registered at Clinic",
+    "btnBack" : "Back"
+  },
+  "clinicEditComponent" : {
+    "headerTitle" : "Edit User",
+    "email" : "Email",
+    "name" : "Name",
+    "address" : "Address",
+    "placeOfBirth" : "Place Of Birth",
+    "dateOfBirth" : "Date Of Birth",
+    "phoneNumber" : "Phone Number",
+    "userCode" : "User Code",
+    "gender" : "Gender",
+    "religion" : "Religion",
+    "status" : "Status",
+    "registeredAtClinic" : "Registered at Clinic",
+    "btnSubmit" : "Submit",
+    "btnBack" : "Back"
+  },
+  "ecgComponent" : {
+    "headingTitle" : "ECG Graphics",
+    "search" : {
+      "keyword" : "Date",
+      "SortType" : "Sort Type",
+      "sortBased" : "Sort Based",
+      "size" : "Size",
+      "btnSearch" : "See"
+    },
+    "btnBack" : "Back"
+  },
+  "unauthorizedComponent" : {
+    "message": "Sorry, Your role is unauthorized to open this page !"
+  },
+  "trxComponent" : {
+    "headingTitle" : "Transaction Data",
+    "search" : {
+      "keyword" : "Keyword",
+      "SortType" : "Sort Type",
+      "sortBased" : "Sort Based",
+      "searchBase" : "Search Based",
+      "size" : "Size Per Page",
+      "btnSearch" : "Search",
+      "all" : "All"
+    },
+    "table" : {
+      "header" : {
+        "no" : "No",
+        "orderNumber" : "Order Number",
+        "dateIn" : "Order Date",
+        "address" : "Address To Visit",
+        "patientName" : "Patient Name",
+        "clinicName" : "Clinic Name",
+        "action" : "Action",
+        "status" : "Status"
+      },
+      "btnAction" : {
+        "detail" : "Detail",
+        "edit" : "Edit",
+        "delete" : "Delete",
+        "assign" : "Assign"
+      }
+    },
+    "modal" : {
+      "title" : "Delete This Transaction",
+      "message"  : " will be deleted, Are you sure want to delete this transaction from transaction list ?",
+      "btnYes" : "Yes",
+      "btnNo" : "No"
+    }
+  },
+  "trxDetailsComponent" : {
+    "headerTitle" : "Transaction Details",
+    "orderNumber" : "Order Number",
+    "patientName" : "Patient Name",
+    "patientCode" : "Patient Code",
+    "dateOrderIn" : "Order Date",
+    "addressToVisit" : "Address To Visit",
+    "clinic" : "Clinic Homecare",
+    "status" : "Transaction Status",
+    "dateTreatment" : "Treatment Date",
+    "predictionPrice" : "Prediction Price",
+    "fixedPrice" : "Fixed Price / Final Price",
+    "paymentFixedPriceStatus" : "Status of Payment Fixed Price / Final Price",
+    "transactionType" : "Transaction Type",
+    "listOfNurse" : "Nurse List",
+    "listOfDoctor" : "Doctor List",
+    "listOfServices" : "Services List",
+    "listOfVitalSign" : "Vital Sign List",
+    "btnSeeNurse" : "See Nurse",
+    "btnSeeDoctor" : "See Doctor",
+    "btnSeeServices" : "See Services",
+    "btnSeeVitalSign" : "See Vital Sign",
+    "btnInputVitalSign" : "Input Vital Sign",
+    "btnBack" : "Back",
+    "modal" : {
+      "titleNurse" : "List of Assigned Nurse",
+      "titleDoctor" : "List of Assigned Doctor",
+      "titleServices" : "List of Services",
+      "titleVitalSign" : "List of Vital Sign",
+      "titleInputVitalSign" : "Input Vital Sign",
+      "btnClose" : "Close",
+      "btnInput" : "Input",
+      "table" : {
+        "number" : "No",
+        "name" : "Name",
+        "address" : "Address",
+        "phoneNumber" : "Phone",
+        "licenseNumber" : "License Number",
+        "specialist" : "Specialist",
+        "price" : "Price (IDR)",
+        "code" : "Code",
+        "temperature" : "Temperature (Celsius)",
+        "sistol" : "Systolic (mmHg)",
+        "diastol" : "Diastole (mmHg)",
+        "heartBeat" : "Heart Beat (BPM)",
+        "pulseOximetry" : "Pulse Oximetry (%)",
+        "respiratory" : "Respiratory (Times per minutes)",
+        "total" : "Total"
+      }
+    },
+    "medicine" : "Kind of Medicine",
+    "nurseAction" : "Nurse Action",
+    "diagnosis" : "Diagnosis"
+  },
+  "trxEditComponent" : {
+    "headerTitle": "Edit Transaction",
+    "predictionPrice" : "Prediction Price *IDR",
+    "fixedPrice" : "Fixed Price / Final Price *IDR",
+    "status": "Transaction Status",
+    "paymentFixedPriceStatus" : "Status of Payment Fixed Price / Final Price",
+    "dateTreatment" : "Treatment Date",
+    "remarkDiagnosis": "Kind of Diagnosis",
+    "remarkMedicine": "Kind of Medicine",
+    "nurseAction" : "Nurse Action",
+    "btnBack" : "Back",
+    "btnSubmit" : "Edit"
+  },
+  "trxAssignComponent" : {
+    "search" : {
+      "keyword" : "Keyword for nurse",
+      "keywordDoctor" : "Keyword for doctor",
+      "SortType" : "Sort Type",
+      "sortBased" : "Sort Based",
+      "searchBase" : "Search Based",
+      "size" : "Size Per Page",
+      "btnSearch" : "Search",
+      "btnClear" : "Reset",
+      "all" : "All"
+    },
+    "headerTitle": "Assign Nurse and Doctor",
+    "availableNurse" : "Available Nurse",
+    "availableDoctor" : "Available Doctor",
+    "patientName" : "Patient Name",
+    "patientCode" : "Patient Code",
+    "orderName" : "Order Name",
+    "dateTreatment" : "Treatment Date",
+    "phoneNumber" : "Phone Number",
+    "listOfNurse" : "List of Nurse",
+    "listOfDoctor" : "List of Doctor",
+    "selectedNurse" : "Selected Nurse",
+    "selectedDoctor" : "Selected Doctor",
+    "nurseName" : "Nurse Name",
+    "nurseCode" : "Nurse Code",
+    "doctorName" : "Doctor Name",
+    "doctorCode" : "Doctor Code",
+    "nurseDetail" : "Details",
+    "doctorDetail" : "Details",
+    "str" : "License Number",
+    "choose" : "Choose",
+    "action" : "Action",
+    "btnBack" : "Back",
+    "btnDetail" : "Detail",
+    "btnDelete" : "Delete",
+    "modal" : {
+      "titleNurse" : "Detail Nurse",
+      "titleDoctor" : "Detail Doctor",
+      "btnClose" : "Close"
+    }
+  },
+  "nurseAddComponent" : {
+    "headerTitle" : "Add New Nurse",
+    "email" : "Email",
+    "name" : "Name",
+    "address" : "Address",
+    "placeOfBirth" : "Place Of Birth",
+    "dateOfBirth" : "Date Of Birth",
+    "phoneNumber" : "Phone Number",
+    "nurseCode" : "Nurse Code",
+    "gender" : "Gender",
+    "religion" : "Religion",
+    "status" : "Status",
+    "sipp" : "License Number",
+    "registeredAtClinic" : "Registered at Clinic",
+    "btnSubmit" : "Add",
+    "btnBack" : "Back",
+    "password" : "Password"
+  },
+  "doctorAddComponent" : {
+    "headerTitle" : "Add New Doctor",
+    "email" : "Email",
+    "name" : "Name",
+    "address" : "Address",
+    "placeOfBirth" : "Place Of Birth",
+    "dateOfBirth" : "Date Of Birth",
+    "phoneNumber" : "Phone Number",
+    "doctorCode" : "Doctor Code",
+    "gender" : "Gender",
+    "religion" : "Religion",
+    "status" : "Status",
+    "registerNumber" : "License Number",
+    "specialist" : "Specialist",
+    "registeredAtClinic" : "Registered at Clinic",
+    "btnSubmit" : "Add",
+    "btnBack" : "Back",
+    "password" : "Password"
+  },
+  "clinicAddComponent" : {
+    "headerTitle" : "Add New Clinic User",
+    "email" : "Email",
+    "name" : "Name",
+    "address" : "Address",
+    "placeOfBirth" : "Place Of Birth",
+    "dateOfBirth" : "Date Of Birth",
+    "phoneNumber" : "Phone Number",
+    "userCode" : "User Code",
+    "gender" : "Gender",
+    "religion" : "Religion",
+    "status" : "Status",
+    "registerNumber" : "License Number",
+    "btnSubmit" : "Add",
+    "btnBack" : "Back",
+    "password" : "Password",
+    "registeredAtClinic" : "Registered at Clinic"
+  },
+  "servicesComponent" : {
+    "headerTitle" : "List Of Homecare Services",
+    "search" : {
+      "keyword" : "Keyword",
+      "SortType" : "Sort Type",
+      "sortBased" : "Sort Based",
+      "searchBase" : "Search Based",
+      "size" : "Size Per Page",
+      "btnSearch" : "Search",
+      "all" : "All",
+      "newService" : "New Service"
+    },
+    "table" : {
+      "header" : {
+        "no" : "No",
+        "serviceName" : "Service Name",
+        "serviceCode" : "Service Code",
+        "price" : "Price (IDR)",
+        "clinic" : "Clinic",
+        "statusActive": "Status Active",
+        "action" : "Action"
+      },
+      "btnAction" : {
+        "edit" : "Edit",
+        "delete" : "Delete"
+      }
+    },
+    "modal" : {
+      "title" : "Delete Service",
+      "message"  : " will be deleted, Are you sure want to delete this service from services list ?",
+      "btnYes" : "Yes",
+      "btnNo" : "No"
+    }
+  },
+  "serviceEditComponent" : {
+    "headerTitle": "Edit Service",
+    "nameOfServices" : "Name Of Services",
+    "codeOfServices" : "Code Of Services",
+    "price" : "Price (IDR)",
+    "statusActive" : "Status Active",
+    "btnSubmit" : "Submit",
+    "btnBack" : "Back"
+  },
+  "serviceAddComponent" : {
+    "headerTitle": "Add Service",
+    "nameOfServices" : "Name Of Services",
+    "codeOfServices" : "Code Of Services",
+    "price" : "Price (IDR)",
+    "btnSubmit" : "Submit",
+    "btnBack" : "Back"
+  }
+}

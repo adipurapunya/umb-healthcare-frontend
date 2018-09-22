@@ -1,0 +1,698 @@
+{
+  "navbar" : {
+    "adminPanel" : "管理面板",
+    "home" : "阳台",
+    "language" : "语言",
+    "listLanguage" : {
+      "english" : "英语",
+      "indonesia" : "印度尼西亚语",
+      "chinese" : "中文",
+      "arabic" : "阿拉伯语"
+    },
+    "profile" : "轮廓",
+    "patientData" : "患者数据",
+    "transaction" : "交易",
+    "doctorData" : "医生数据",
+    "nurseData" : "护士数据",
+    "clinicData" : "诊所数据",
+    "ecgData": "心电数据",
+    "logout" : "登出",
+    "login" : "登录",
+    "register" : "创建帐号",
+    "dashboard" : "仪表板",
+    "services": "服务",
+    "homecare" : "家庭护理",
+    "team" : "球队",
+    "aboutUs" : "关于我们",
+    "ourProduct" : "我们的产品"
+  },
+  "patientComponent" : {
+    "headingTitle" : "患者数据",
+    "search" : {
+      "keyword" : "关键词",
+      "SortType" : "排序类型",
+      "sortBased" : "基于排序",
+      "searchBase" : "基于搜索",
+      "size" : "每页大小",
+      "btnSearch" : "搜索",
+      "all" : "所有",
+      "newPatient" : "新病人"
+    },
+    "table" : {
+      "header" : {
+        "no" : "没有",
+        "patientCode" : "患者代码",
+        "palceDOB" : "出生地与出生日期",
+        "gender" : "性别",
+        "email" : "电子邮件",
+        "occupation" : "占用",
+        "ecgCode" : "心电图代码",
+        "clinic" : "诊所",
+        "action" : "行动",
+        "name" : "名称"
+      },
+      "btnAction" : {
+        "detail" : "详情",
+        "edit" : "编辑",
+        "delete" : "删除",
+        "ecg" : "心电图"
+      }
+    },
+    "modal" : {
+      "title" : "删除患者",
+      "message"  : " 将被删除，您确定要从患者列表中删除此患者吗？",
+      "btnYes" : "是",
+      "btnNo" : "没有"
+    }
+  },
+  "doctorComponent" : {
+    "headingTitle" : "患者数据",
+    "search" : {
+      "keyword" : "关键词",
+      "SortType" : "排序类型",
+      "sortBased" : "基于排序",
+      "searchBase" : "基于搜索",
+      "size" : "每页大小",
+      "btnSearch" : "搜索",
+      "all" : "所有",
+      "newDoctor" : "新医生"
+    },
+    "table" : {
+      "header" : {
+        "no" : "没有",
+        "doctorCode" : "患者代码",
+        "palceDOB" : "出生地与出生日期",
+        "gender" : "性别",
+        "email" : "电子邮件",
+        "registerNumber" : "心电图代码",
+        "clinic" : "诊所",
+        "action" : "行动",
+        "name" : "名称"
+      },
+      "btnAction" : {
+        "detail" : "详情",
+        "edit" : "编辑",
+        "delete" : "删除"
+      }
+    },
+    "modal" : {
+      "title" : "删除患者",
+      "message"  : " 将被删除，您确定要从患者列表中删除此患者吗？",
+      "btnYes" : "是",
+      "btnNo" : "没有"
+    }
+  },
+  "profileComponent" : {
+    "headingTitle" : "你的个人资料",
+    "table" : {
+      "email" : "电子邮件",
+      "name" : "名称",
+      "address" : "地址",
+      "placeOfBirth" : "出生地",
+      "dateOfBirth" : "出生日期",
+      "phoneNumber" : "电话号码",
+      "adminCode" : "管理员代码",
+      "patientCode" : "患者代码",
+      "nurseCode" : "护士代码",
+      "doctorCode" : "医生代码",
+      "userCode" : "用户代码",
+      "gender" : "性别",
+      "religion" : "宗教",
+      "status" : "状态",
+      "registrationDate" : "注册日期",
+      "role" : "角色",
+      "sipp" : "护士执照号码",
+      "ecgCode" : "心电图代码",
+      "registeredAtClinic" : "在诊所注册",
+      "specialist" : "专家",
+      "doctorRegisterNumber" : "医生注册号码",
+      "occupation" : "占用"
+    },
+    "button" : {
+      "changeData" : "更改数据",
+      "changePassword" : "更改密码"
+    }
+  },
+  "loginComponent" :{
+    "headerTitle" : "登录",
+    "email" : "电子邮件",
+    "password" : "密码",
+    "role" : "角色",
+    "btnLogin" : "登录"
+  },
+  "footerComponent" : {
+    "name" : "家庭护理数字医疗系统"
+  },
+  "registerComponent" : {
+    "headerTitle" : "创建帐户表单",
+    "name" : "名称",
+    "email" : "电子邮件",
+    "password" : "密码",
+    "role" : "角色",
+    "atClinic" : "在诊所",
+    "linkAtClinic" : "请点击这里注册诊所/医院",
+    "verificationCode" : "验证码",
+    "btnSubmit" : "提交"
+  },
+  "homeComponent" : {
+    "header": "家庭护理数字医疗系统",
+    "btnRegister" : "寄存器",
+    "btnLogin" : "登录",
+    "column1" : {
+      "title" : "在线医疗记录",
+      "content" : "可从任何地方（从网站和智能手机）访问的在线医疗记录"
+    },
+    "column2" : {
+      "title" : "实时心电图",
+      "content" : "通过使用嵌入在衣服上的小型ECG设备，可以24小时实时监控心电图"
+    },
+    "column3" : {
+      "title" : "UMB 和 ITB 之间的合作",
+      "content" : "这项研究是两所大学之间的合作，即万隆 Muhamadiyah 大学（UMB）和万隆研究所（ITB）"
+    }
+  },
+  "dashboardComponent" : {
+    "headerTitle" : "仪表板",
+    "message" : "欢迎使用您的信息中心，您可以根据自己的角色进行管理"
+  },
+  "editProfileComponet" : {
+    "headerTitle" : "编辑您的个人资料数据",
+    "email" : "电子邮件",
+    "name" : "名称",
+    "address" : "地址",
+    "placeOfBirth" : "出生地",
+    "dateOfBirth" : "出生日期",
+    "phoneNumber" : "电话号码",
+    "adminCode" : "管理员代码",
+    "patientCode" : "患者代码",
+    "nurseCode" : "护士代码",
+    "doctorCode" : "医生代码",
+    "userCode" : "用户代码",
+    "gender" : "性别",
+    "religion" : "宗教",
+    "status" : "状态",
+    "registrationDate" : "注册日期",
+    "role" : "角色",
+    "sipp" : "护士执照号码",
+    "ecgCode" : "心电图代码",
+    "registeredAtClinic" : "在诊所注册",
+    "specialist" : "专家",
+    "doctorRegisterNumber" : "医生注册号码",
+    "occupation" : "占用",
+    "btnSubmit" : "提交",
+    "btnBack" : "背部"
+  },
+  "editPasswordComponent" : {
+    "headerTitle" : "编辑密码",
+    "oldPassword" : "旧密码",
+    "newPassword" : "新密码",
+    "reTypePassword" : "重新输入新密码",
+    "btnSubmit" : "提交",
+    "btnBack" : "背部"
+  },
+  "patientDetailsComponent" : {
+    "headerTitle" : "患者详情",
+    "email" : "电子邮件",
+    "name" : "名称",
+    "address" : "地址",
+    "placeAndDateOfBirth" : "出生地与出生日期",
+    "phoneNumber" : "电话号码",
+    "patientCode" : "患者代码",
+    "gender" : "性别",
+    "religion" : "宗教",
+    "status" : "状态",
+    "registrationDate" : "首次登记日期",
+    "role" : "角色",
+    "ecgCode" : "心电图代码",
+    "registeredAtClinic" : "在诊所注册",
+    "occupation" : "占用",
+    "btnBack" : "背部"
+  },
+  "patientEditComponent" : {
+    "headerTitle" : "编辑病人",
+    "email" : "电子邮件",
+    "name" : "名称",
+    "address" : "地址",
+    "placeOfBirth" : "出生地",
+    "dateOfBirth" : "出生日期",
+    "phoneNumber" : "电话号码",
+    "patientCode" : "患者代码",
+    "gender" : "性别",
+    "religion" : "宗教",
+    "status" : "状态",
+    "ecgCode" : "心电图代码",
+    "registeredAtClinic" : "在诊所注册",
+    "occupation" : "占用",
+    "btnSubmit" : "提交",
+    "btnBack" : "背部"
+  },
+  "patientAddComponent" : {
+    "headerTitle" : "添加新病人",
+    "email" : "电子邮件",
+    "name" : "名称",
+    "address" : "地址",
+    "placeOfBirth" : "出生地",
+    "dateOfBirth" : "出生日期",
+    "phoneNumber" : "电话号码",
+    "patientCode" : "患者代码",
+    "gender" : "性别",
+    "religion" : "宗教",
+    "status" : "状态",
+    "ecgCode" : "心电图代码",
+    "registeredAtClinic" : "在诊所注册",
+    "occupation" : "占用",
+    "btnSubmit" : "加",
+    "btnBack" : "背部",
+    "password" : "密码"
+  },
+  "doctorDetailsComponent" : {
+    "headerTitle" : "患者详情",
+    "email" : "电子邮件",
+    "name" : "名称",
+    "address" : "地址",
+    "placeAndDateOfBirth" : "出生地与出生日期",
+    "phoneNumber" : "电话号码",
+    "doctorCode" : "患者代码",
+    "gender" : "性别",
+    "religion" : "宗教",
+    "status" : "状态",
+    "registrationDate" : "首次登记日期",
+    "role" : "角色",
+    "specialist" : "心电图代码",
+    "registeredAtClinic" : "在诊所注册",
+    "registerNumber" : "占用",
+    "btnBack" : "背部"
+  },
+  "doctorEditComponent" : {
+    "headerTitle" : "编辑病人",
+    "email" : "电子邮件",
+    "name" : "名称",
+    "address" : "地址",
+    "placeOfBirth" : "出生地",
+    "dateOfBirth" : "出生日期",
+    "phoneNumber" : "电话号码",
+    "doctorCode" : "患者代码",
+    "gender" : "性别",
+    "religion" : "宗教",
+    "status" : "状态",
+    "specialist" : "心电图代码",
+    "registeredAtClinic" : "在诊所注册",
+    "registerNumber" : "占用",
+    "btnSubmit" : "提交",
+    "btnBack" : "背部"
+  },
+  "nurseComponent" : {
+    "headingTitle" : "患者数据",
+    "search" : {
+      "keyword" : "关键词",
+      "SortType" : "排序类型",
+      "sortBased" : "基于排序",
+      "searchBase" : "基于搜索",
+      "size" : "每页大小",
+      "btnSearch" : "搜索",
+      "all" : "所有",
+      "newNurse" : "新护士"
+    },
+    "table" : {
+      "header" : {
+        "no" : "没有",
+        "nurseCode" : "患者代码",
+        "palceDOB" : "出生地与出生日期",
+        "gender" : "性别",
+        "email" : "电子邮件",
+        "sipp" : "心电图代码",
+        "clinic" : "诊所",
+        "action" : "行动",
+        "name" : "名称"
+      },
+      "btnAction" : {
+        "detail" : "详情",
+        "edit" : "编辑",
+        "delete" : "删除"
+      }
+    },
+    "modal" : {
+      "title" : "删除患者",
+      "message"  : " 将被删除，您确定要从患者列表中删除此患者吗？",
+      "btnYes" : "是",
+      "btnNo" : "没有"
+    }
+  },
+  "nurseDetailsComponent" : {
+    "headerTitle" : "患者详情",
+    "email" : "电子邮件",
+    "name" : "名称",
+    "address" : "地址",
+    "placeAndDateOfBirth" : "出生地与出生日期",
+    "phoneNumber" : "电话号码",
+    "nurseCode" : "患者代码",
+    "gender" : "性别",
+    "religion" : "宗教",
+    "status" : "状态",
+    "registrationDate" : "首次登记日期",
+    "role" : "角色",
+    "registeredAtClinic" : "在诊所注册",
+    "sipp" : "占用",
+    "btnBack" : "背部"
+  },
+  "nurseEditComponent" : {
+    "headerTitle" : "编辑病人",
+    "email" : "电子邮件",
+    "name" : "名称",
+    "address" : "地址",
+    "placeOfBirth" : "出生地",
+    "dateOfBirth" : "出生日期",
+    "phoneNumber" : "电话号码",
+    "nurseCode" : "患者代码",
+    "gender" : "性别",
+    "religion" : "宗教",
+    "status" : "状态",
+    "registeredAtClinic" : "在诊所注册",
+    "sipp" : "占用",
+    "btnSubmit" : "提交",
+    "btnBack" : "背部"
+  },
+  "clinicComponent" : {
+    "headingTitle" : "患者数据",
+    "search" : {
+      "keyword" : "关键词",
+      "SortType" : "排序类型",
+      "sortBased" : "基于排序",
+      "searchBase" : "基于搜索",
+      "size" : "每页大小",
+      "btnSearch" : "搜索",
+      "all" : "所有",
+      "newClinic" : "新诊所"
+    },
+    "table" : {
+      "header" : {
+        "no" : "没有",
+        "userCode" : "患者代码",
+        "palceDOB" : "出生地与出生日期",
+        "gender" : "性别",
+        "email" : "电子邮件",
+        "clinic" : "诊所",
+        "action" : "行动",
+        "name" : "名称"
+      },
+      "btnAction" : {
+        "detail" : "详情",
+        "edit" : "编辑",
+        "delete" : "删除"
+      }
+    },
+    "modal" : {
+      "title" : "删除患者",
+      "message"  : " 将被删除，您确定要从患者列表中删除此患者吗？",
+      "btnYes" : "是",
+      "btnNo" : "没有"
+    }
+  },
+  "clinicDetailsComponent" : {
+    "headerTitle" : "患者详情",
+    "email" : "电子邮件",
+    "name" : "名称",
+    "address" : "地址",
+    "placeAndDateOfBirth" : "出生地与出生日期",
+    "phoneNumber" : "电话号码",
+    "userCode" : "患者代码",
+    "gender" : "性别",
+    "religion" : "宗教",
+    "status" : "状态",
+    "registrationDate" : "首次登记日期",
+    "role" : "角色",
+    "registeredAtClinic" : "在诊所注册",
+    "btnBack" : "背部"
+  },
+  "clinicEditComponent" : {
+    "headerTitle" : "编辑病人",
+    "email" : "电子邮件",
+    "name" : "名称",
+    "address" : "地址",
+    "placeOfBirth" : "出生地",
+    "dateOfBirth" : "出生日期",
+    "phoneNumber" : "电话号码",
+    "userCode" : "患者代码",
+    "gender" : "性别",
+    "religion" : "宗教",
+    "status" : "状态",
+    "registeredAtClinic" : "在诊所注册",
+    "btnSubmit" : "提交",
+    "btnBack" : "背部"
+  },
+  "unauthorizedComponent" : {
+    "message": "抱歉，您的角色未经授权可以打开此页面！"
+  },
+  "trxComponent" : {
+    "headingTitle" : "交易數據",
+    "search" : {
+      "keyword" : "关键词",
+      "SortType" : "排序类型",
+      "sortBased" : "基于排序",
+      "searchBase" : "基于搜索",
+      "size" : "每页大小",
+      "btnSearch" : "搜索",
+      "all" : "所有"
+    },
+    "table" : {
+      "header" : {
+        "no" : "沒有",
+        "orderNumber" : "訂單號",
+        "dateIn" : "訂購日期",
+        "address" : "訪問地址",
+        "patientName" : "患者姓名",
+        "clinicName" : "診所名稱",
+        "action" : "行動",
+        "status" : "狀態"
+      },
+      "btnAction" : {
+        "detail" : "詳情",
+        "edit" : "編輯",
+        "delete" : "刪除",
+        "assign" : "分配"
+      }
+    },
+    "modal" : {
+      "title" : "刪除此交易",
+      "message"  : " 將被刪除，您確定要從交易清單中刪除此交易嗎？",
+      "btnYes" : "是",
+      "btnNo" : "沒有"
+    }
+  },
+  "trxDetailsComponent" : {
+    "headerTitle" : "交易明細",
+    "orderNumber" : "訂單號",
+    "patientName" : "患者姓名",
+    "patientCode" : "患者代碼",
+    "dateOrderIn" : "訂購日期",
+    "addressToVisit" : "地址參觀",
+    "clinic" : "診所家庭護理",
+    "status" : "交易狀態",
+    "dateTreatment" : "治療日期",
+    "predictionPrice" : "預測價格",
+    "fixedPrice" : "固定價格/最終價格",
+    "paymentFixedPriceStatus" : "支付固定價格/最終價格的狀態",
+    "transactionType" : "交易類型",
+    "listOfNurse" : "護士名單",
+    "listOfDoctor" : "“醫生名單",
+    "listOfServices" : "服务清单",
+    "listOfVitalSign" : "生命体征清单",
+    "btnSeeNurse" : "見護士",
+    "btnSeeDoctor" : "見醫生",
+    "btnSeeServices" : "见服务",
+    "btnSeeVitalSign" : "见生命体征",
+    "btnInputVitalSign" : "输入生命体征",
+    "btnBack" : "背部",
+    "modal" : {
+      "titleNurse" : "指定护士名单",
+      "titleDoctor" : "指定医生名单",
+      "titleServices" : "服务清单",
+      "titleVitalSign" : "生命体征清单",
+      "titleInputVitalSign" : "输入生命体征",
+      "btnClose" : "关",
+      "btnInput" : "输入",
+      "table" : {
+        "number" : "数",
+        "name" : "名称",
+        "address" : "地址",
+        "phoneNumber" : "电话",
+        "licenseNumber" : "许可证号",
+        "specialist" : "专家",
+        "price" : "价格（IDR)",
+        "code" : "码",
+        "temperature" : "温度（摄氏度)",
+        "sistol" : "收缩压（mmHg)",
+        "diastol" : "心脏舒张期（mmHg)",
+        "heartBeat" : "心跳（BPM）",
+        "pulseOximetry" : "脉搏血氧仪 （％",
+        "respiratory" : "呼吸（每分钟次数",
+        "total" : "总"
+      }
+    },
+    "medicine" : "一种医学",
+    "nurseAction" : "护士行动",
+    "diagnosis" : "诊断"
+  },
+  "trxEditComponent" : {
+    "headerTitle": "编辑交易",
+    "predictionPrice" : "预测价格 *IDR",
+    "fixedPrice" : "固定价格/最终价格 *IDR",
+    "status": "交易状态",
+    "paymentFixedPriceStatus" : "支付固定价格/最终价格的状态",
+    "dateTreatment" : "治疗日期",
+    "remarkDiagnosis": "一种诊断",
+    "remarkMedicine": "一种医学",
+    "nurseAction" : "护士行动",
+    "btnBack" : "背部",
+    "btnSubmit" : "编辑"
+  },
+  "trxAssignComponent" : {
+    "search" : {
+      "keyword" : "护士关键字",
+      "keywordDoctor" : "医生关键字",
+      "SortType" : "排序类型",
+      "sortBased" : "基于排序",
+      "searchBase" : "基于搜索",
+      "size" : "每页大小",
+      "btnSearch" : "搜索",
+      "btnClear" : "重启",
+      "all" : "所有"
+    },
+    "headerTitle": "分配护士和医生",
+    "availableNurse" : "可用的护士",
+    "availableDoctor" : "可用医生",
+    "patientName" : "患者姓名",
+    "patientCode" : "患者代码",
+    "orderName" : "订单名称",
+    "dateTreatment" : "治疗日期",
+    "phoneNumber" : "电话号码",
+    "listOfNurse" : "护士名单",
+    "listOfDoctor" : "医生名单",
+    "selectedNurse" : "精选护士",
+    "selectedDoctor" : "选定的医生",
+    "nurseName" : "护士姓名",
+    "nurseCode" : "护士代码",
+    "doctorName" : "医生姓名",
+    "doctorCode" : "医生代码",
+    "nurseDetail" : "细节护士",
+    "doctorDetail" : "详细医生",
+    "str" : "许可证号",
+    "choose" : "选择",
+    "action" : "行动",
+    "btnBack" : "背部",
+    "btnDetail" : "详情",
+    "btnDelete" : "删除",
+    "modal" : {
+      "titleNurse" : "细节护士",
+      "titleDoctor" : "细节医生",
+      "btnClose" : "关"
+    }
+  },
+  "nurseAddComponent" : {
+    "headerTitle" : "添加新护士",
+    "email" : "电子邮件",
+    "name" : "名称",
+    "address" : "地址",
+    "placeOfBirth" : "出生地",
+    "dateOfBirth" : "出生日期",
+    "phoneNumber" : "电话号码",
+    "nurseCode" : "护士代码",
+    "gender" : "性别",
+    "religion" : "宗教",
+    "status" : "状态",
+    "sipp" : "许可证号",
+    "registeredAtClinic" : "在诊所注册",
+    "btnSubmit" : "加",
+    "btnBack" : "背部",
+    "password" : "密码"
+  },
+  "doctorAddComponent" : {
+    "headerTitle" : "新医生",
+    "email" : "电子邮件",
+    "name" : "名称",
+    "address" : "地址",
+    "placeOfBirth" : "出生地",
+    "dateOfBirth" : "出生日期",
+    "phoneNumber" : "电话号码",
+    "doctorCode" : "护士代码",
+    "gender" : "性别",
+    "religion" : "宗教",
+    "status" : "状态",
+    "registerNumber" : "注册号",
+    "specialist" : "专家",
+    "registeredAtClinic" : "在诊所注册",
+    "btnSubmit" : "加",
+    "btnBack" : "背部",
+    "password" : "密码"
+  },
+  "clinicAddComponent" : {
+    "headerTitle" : "新诊所用户",
+    "email" : "电子邮件",
+    "name" : "名称",
+    "address" : "地址",
+    "placeOfBirth" : "出生地",
+    "dateOfBirth" : "出生日期",
+    "phoneNumber" : "电话号码",
+    "userCode" : "用户代码",
+    "gender" : "性别",
+    "religion" : "宗教",
+    "status" : "状态",
+    "registeredAtClinic" : "在诊所注册",
+    "btnSubmit" : "加",
+    "btnBack" : "背部",
+    "password" : "密码",
+    "registeredAtClinic" : "在诊所注册"
+  },
+  "servicesComponent" : {
+    "headerTitle" : "家庭护理服务清单",
+    "search" : {
+      "keyword" : "关键词",
+      "SortType" : "排序类型",
+      "sortBased" : "基于排序",
+      "searchBase" : "基于搜索",
+      "size" : "每页大小",
+      "btnSearch" : "搜索",
+      "all" : "所有",
+      "newService" : "新服务"
+    },
+    "table" : {
+      "header" : {
+        "no" : "数",
+        "serviceName" : "服务名称",
+        "serviceCode" : "服务代码",
+        "price" : "价格 (IDR)",
+        "clinic" : "诊所",
+        "statusActive": "状态有效",
+        "action" : "行动"
+      },
+      "btnAction" : {
+        "edit" : "编辑",
+        "delete" : "删除"
+      }
+    },
+    "modal" : {
+      "title" : "删除服务",
+      "message"  : " 将被删除，您确定要从服务列表中删除此服务吗？",
+      "btnYes" : "是",
+      "btnNo" : "没有"
+    }
+  },
+  "serviceEditComponent" : {
+    "headerTitle": "编辑服务",
+    "nameOfServices" : "服务名称",
+    "codeOfServices" : "服务守则",
+    "price" : "价钱 (IDR)",
+    "statusActive" : "状态有效",
+    "btnSubmit" : "提交",
+    "btnBack" : "背部"
+  },
+  "serviceAddComponent" : {
+    "headerTitle": "添加服务",
+    "nameOfServices" : "服务名称",
+    "codeOfServices" : "服务守则",
+    "price" : "价钱 (IDR)",
+    "btnSubmit" : "提交",
+    "btnBack" : "背部"
+  }
+
+}

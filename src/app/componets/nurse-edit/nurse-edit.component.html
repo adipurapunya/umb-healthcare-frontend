@@ -1,0 +1,92 @@
+<div class="col-sm-12">
+
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">{{'nurseEditComponent.headerTitle' | translate}} ( {{nurse.fullName}} )</h1>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="nurse">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="col-md-12">
+            <form (submit)="onEditSubmit()">
+
+              <div class="form-group">
+                <label>{{'nurseEditComponent.email' | translate}}</label>
+                <input type="text" [(ngModel)]="nurse.email" name="email" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>{{'nurseEditComponent.name' | translate}}</label>
+                <input type="text" [(ngModel)]="nurse.fullName" name="fullName" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>{{'nurseEditComponent.address' | translate}}</label>
+                <input type="text" [(ngModel)]="nurse.address" name="address" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>{{'nurseEditComponent.placeOfBirth' | translate}}</label>
+                <input type="text" [(ngModel)] = "nurse.placeBirth" name="placeBirth" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label>{{'nurseEditComponent.dateOfBirth' | translate}}</label>
+                <input type="date" [(ngModel)] = "nurse.dateBirth" name="dateBirth" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label>{{'nurseEditComponent.phoneNumber' | translate}}</label>
+                <input type="text" [(ngModel)]="nurse.phoneNumber" name="phoneNumber" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>{{'nurseEditComponent.registeredAtClinic' | translate}}</label>
+                <input type="text" [(ngModel)] = "nurse.clinic.nameOfClinic" name="clinic" class="form-control" disabled>
+              </div>
+
+              <div class="form-group">
+                <label>{{'nurseEditComponent.nurseCode' | translate}}</label>
+                <input type="text" [(ngModel)]="nurse.nurseCode" name="nurseCode" class="form-control" disabled>
+              </div>
+
+
+              <div class="form-group">
+                <label>{{'nurseEditComponent.sipp' | translate}}</label>
+                <input type="text" [(ngModel)]="nurse.sipp" name="sipp" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>{{'nurseEditComponent.gender' | translate}}</label>
+                <select class="form-control" [(ngModel)]="gendersel" name="gendersel">
+                  <option *ngFor="let gend of genderList;" [value]="gend.name">{{gend.name}}</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>{{'nurseEditComponent.religion' | translate}}</label>
+                <select class="form-control" [(ngModel)]="religionsel" name="religionsel">
+                  <option *ngFor="let relig of religionList;" [value]="relig.name">{{relig.name}}</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>{{'nurseEditComponent.status' | translate}}</label>
+                <select class="form-control" [(ngModel)]="statussel" name="statussel">
+                  <option *ngFor="let stat of statusList;" [value]="stat.id">{{stat.status}}</option>
+                </select>
+              </div>
+
+              <input type="submit" class="btn btn-primary" name="btnSubmit" value="{{'nurseEditComponent.btnSubmit' | translate}}">
+              <input type="submit" class="btn btn-primary" value="{{'nurseEditComponent.btnBack' | translate}}" (click)="goBackMenu()">
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

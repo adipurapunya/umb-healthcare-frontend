@@ -1,0 +1,42 @@
+<div class="jumbotron text-center">
+  <h1>{{'homeComponent.header' | translate}}</h1>
+  <div>
+    <a class="btn btn-info" *ngIf="!authService.loggedIn()" [routerLinkActive] = "['active']" [routerLinkActiveOptions]= "{exact:true}" [routerLink]="['/register']">{{'homeComponent.btnRegister' | translate}}</a>
+    <a class="btn btn-success" *ngIf="!authService.loggedIn()" [routerLinkActive] = "['active']" [routerLinkActiveOptions]= "{exact:true}" [routerLink]="['/login']">{{'homeComponent.btnLogin' | translate}}</a>
+  </div>
+  <br>
+
+  <div align="center">
+    <img src="assets/images/umb.png" width="220" height="220">
+    <img src="assets/images/pptik.png" width="220" height="220">
+  </div>
+
+  <br>
+  <div>
+    <img src="assets/images/android.png" width="170" height="50">
+  </div>
+
+
+
+</div>
+
+<div class="row">
+  <div class="col-md-4 jumbotron">
+    <h3 align="center">{{'homeComponent.column1.title' | translate}}</h3>
+    <p align="justify">{{'homeComponent.column1.content' | translate}}</p>
+  </div>
+
+  <div class="col-md-4 jumbotron">
+    <h3 align="center">{{'homeComponent.column2.title' | translate}}</h3>
+    <p align="justify">{{'homeComponent.column2.content' | translate}}</p>
+  </div>
+
+  <div class="col-md-4 jumbotron">
+    <h3 align="center">{{'homeComponent.column3.title' | translate}}</h3>
+    <p align="justify">{{'homeComponent.column3.content' | translate}}</p>
+  </div>
+
+</div>
+
+
+

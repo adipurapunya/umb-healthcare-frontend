@@ -1,0 +1,106 @@
+<div class="col-sm-12">
+
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">{{'patientAddComponent.headerTitle' | translate}}</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="col-md-12">
+            <form (submit)="onAddSubmit()">
+
+              <div class="form-group">
+                <label>{{'patientAddComponent.email' | translate}} *</label>
+                <input type="text" [(ngModel)]="email" name="email" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>{{'patientAddComponent.name' | translate}}*</label>
+                <input type="text" [(ngModel)]="fullName" name="fullName" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>{{'patientAddComponent.address' | translate}}</label>
+                <input type="text" [(ngModel)]="address" name="address" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>{{'patientAddComponent.placeOfBirth' | translate}}</label>
+                <input type="text" [(ngModel)]="placeBirth" name="placeBirth" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label>{{'patientAddComponent.dateOfBirth' | translate}} *</label>
+                <input type="date" [(ngModel)]="dateBirth" name="dateBirth" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label>{{'patientAddComponent.phoneNumber' | translate}}</label>
+                <input type="text" [(ngModel)]="phoneNumber" name="phoneNumber" class="form-control" >
+              </div>
+
+              <!--
+              <div class="form-group">
+                <label>{{'patientAddComponent.registeredAtClinic' | translate}}</label>
+                <input type="text"  name="clinic" class="form-control" disabled>
+              </div>
+              -->
+
+              <div class="form-group">
+                <label>{{'patientAddComponent.registeredAtClinic' | translate}} *</label>
+                <select class="form-control" [(ngModel)]="clinicsel" name="clinicsel">
+                  <option *ngFor="let clc of clinicsList;" [value]="clc.id">{{clc.nameOfClinic}}</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>{{'patientAddComponent.ecgCode' | translate}}</label>
+                <input type="text" [(ngModel)]="deviceCode" name="deviceCode" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>{{'patientAddComponent.occupation' | translate}}</label>
+                <input type="text" [(ngModel)]="occupation" name="occupation" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>{{'patientAddComponent.gender' | translate}}</label>
+                <select class="form-control" [(ngModel)]="gendersel" name="gendersel">
+                  <option *ngFor="let gend of genderList;" [value]="gend.name">{{gend.name}}</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>{{'patientAddComponent.religion' | translate}}</label>
+                <select class="form-control" [(ngModel)]="religionsel" name="religionsel">
+                  <option *ngFor="let relig of religionList;" [value]="relig.name">{{relig.name}}</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>{{'patientAddComponent.status' | translate}}</label>
+                <select class="form-control" [(ngModel)]="statussel" name="statussel">
+                  <option *ngFor="let stat of statusList;" [value]="stat.id">{{stat.status}}</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>{{'patientAddComponent.password' | translate}} *</label>
+                <input type="password" [(ngModel)]="password" name="password" class="form-control" >
+              </div>
+
+              <input type="submit" class="btn btn-primary" name="btnSubmit" value="{{'patientAddComponent.btnSubmit' | translate}}">
+
+              <input type="submit" class="btn btn-primary" value="{{'patientAddComponent.btnBack' | translate}}" (click)="goBackMenu()">
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,87 @@
+<div class="col-sm-12">
+
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">{{'clinicEditComponent.headerTitle' | translate}} ( {{clinic.fullName}} )</h1>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="clinic">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="col-md-12">
+            <form (submit)="onEditSubmit()">
+
+              <div class="form-group">
+                <label>{{'clinicEditComponent.email' | translate}}</label>
+                <input type="text" [(ngModel)]="clinic.email" name="email" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>{{'clinicEditComponent.name' | translate}}</label>
+                <input type="text" [(ngModel)]="clinic.fullName" name="fullName" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>{{'clinicEditComponent.address' | translate}}</label>
+                <input type="text" [(ngModel)]="clinic.address" name="address" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>{{'clinicEditComponent.placeOfBirth' | translate}}</label>
+                <input type="text" [(ngModel)] = "clinic.placeBirth" name="placeBirth" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label>{{'clinicEditComponent.dateOfBirth' | translate}}</label>
+                <input type="date" [(ngModel)] = "clinic.dateBirth" name="dateBirth" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label>{{'clinicEditComponent.phoneNumber' | translate}}</label>
+                <input type="text" [(ngModel)]="clinic.phoneNumber" name="phoneNumber" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>{{'clinicEditComponent.registeredAtClinic' | translate}}</label>
+                <input type="text" [(ngModel)] = "clinic.clinic.nameOfClinic" name="clinic" class="form-control" disabled>
+              </div>
+
+              <div class="form-group">
+                <label>{{'clinicEditComponent.userCode' | translate}}</label>
+                <input type="text" [(ngModel)]="clinic.userCode" name="userCode" class="form-control" disabled>
+              </div>
+
+
+              <div class="form-group">
+                <label>{{'clinicEditComponent.gender' | translate}}</label>
+                <select class="form-control" [(ngModel)]="gendersel" name="gendersel">
+                  <option *ngFor="let gend of genderList;" [value]="gend.name">{{gend.name}}</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>{{'clinicEditComponent.religion' | translate}}</label>
+                <select class="form-control" [(ngModel)]="religionsel" name="religionsel">
+                  <option *ngFor="let relig of religionList;" [value]="relig.name">{{relig.name}}</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>{{'clinicEditComponent.status' | translate}}</label>
+                <select class="form-control" [(ngModel)]="statussel" name="statussel">
+                  <option *ngFor="let stat of statusList;" [value]="stat.id">{{stat.status}}</option>
+                </select>
+              </div>
+
+              <input type="submit" class="btn btn-primary" name="btnSubmit" value="{{'clinicEditComponent.btnSubmit' | translate}}">
+              <input type="submit" class="btn btn-primary" value="{{'clinicEditComponent.btnBack' | translate}}" (click)="goBackMenu()">
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

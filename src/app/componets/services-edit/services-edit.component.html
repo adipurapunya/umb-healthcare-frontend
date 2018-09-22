@@ -1,0 +1,46 @@
+<div class="col-sm-12">
+
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">{{'serviceEditComponent.headerTitle' | translate}}</h1>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="service">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="col-md-12">
+            <form (submit)="onEditSubmit()">
+
+              <div class="form-group">
+                <label>{{'serviceEditComponent.nameOfServices' | translate}}</label>
+                <input type="text" [(ngModel)]="service.nameOfservices" name="nameOfservices" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>{{'serviceEditComponent.codeOfServices' | translate}}</label>
+                <input type="text" [(ngModel)]="service.codeOfservices" name="codeOfservices" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>{{'serviceEditComponent.price' | translate}}</label>
+                <input type="text" [(ngModel)]="service.price" name="price" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label>{{'serviceEditComponent.statusActive' | translate}}</label>
+                <select class="form-control" [(ngModel)]="statusSel" name="statusSel">
+                  <option *ngFor="let stat of statusList;" [value]="stat.value">{{stat.status}}</option>
+                </select>
+              </div>
+
+              <input type="submit" class="btn btn-primary" name="btnSubmit" value="{{'serviceEditComponent.btnSubmit' | translate}}">
+              <input type="submit" class="btn btn-primary" value="{{'serviceEditComponent.btnBack' | translate}}" (click)="goBackMenu()">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+<div class="col-sm-12">
+<div *ngIf="user">
+
+  <h2 class="page-header"> {{'profileComponent.headingTitle' | translate}} </h2>
+
+  <div class="row">
+    <div class="col-md-2">
+      <ul class="list-group">
+        <li class="list-group-item">{{'profileComponent.table.email' | translate}}</li>
+        <li class="list-group-item">{{'profileComponent.table.name' | translate}}</li>
+        <li class="list-group-item">{{'profileComponent.table.address' | translate}}</li>
+        <li class="list-group-item">{{'profileComponent.table.placeOfBirth' | translate}}</li>
+        <li class="list-group-item">{{'profileComponent.table.dateOfBirth' | translate}}</li>
+        <li class="list-group-item">{{'profileComponent.table.phoneNumber' | translate}}</li>
+        <li class="list-group-item" *ngIf="user.roles=='ROLE_ADMIN'">{{'profileComponent.table.adminCode' | translate}}</li>
+        <li class="list-group-item" *ngIf="user.roles=='ROLE_CLINIC'">{{'profileComponent.table.userCode' | translate}}</li>
+        <li class="list-group-item" *ngIf="user.roles=='ROLE_NURSE'">{{'profileComponent.table.nurseCode' | translate}}</li>
+        <li class="list-group-item" *ngIf="user.roles=='ROLE_DOCTOR'">{{'profileComponent.table.doctorCode' | translate}}</li>
+        <li class="list-group-item" *ngIf="user.roles=='ROLE_PATIENT'">{{'profileComponent.table.patientCode' | translate}}</li>
+        <li class="list-group-item" *ngIf="user.roles=='ROLE_NURSE'">{{'profileComponent.table.sipp' | translate}}</li>
+        <li class="list-group-item" *ngIf="user.roles=='ROLE_PATIENT'">{{'profileComponent.table.ecgCode' | translate}}</li>
+        <li class="list-group-item">{{'profileComponent.table.gender' | translate}}</li>
+        <li class="list-group-item">{{'profileComponent.table.religion' | translate}}</li>
+        <li class="list-group-item">{{'profileComponent.table.status' | translate}}</li>
+        <li class="list-group-item">{{'profileComponent.table.registrationDate' | translate}}</li>
+        <li class="list-group-item" *ngIf="user.roles != 'ROLE_ADMIN'">{{'profileComponent.table.registeredAtClinic' | translate}}</li>
+        <li class="list-group-item" *ngIf="user.roles == 'ROLE_DOCTOR'">{{'profileComponent.table.specialist' | translate}}</li>
+        <li class="list-group-item" *ngIf="user.roles == 'ROLE_DOCTOR'">{{'profileComponent.table.doctorRegisterNumber' | translate}}</li>
+        <li class="list-group-item" *ngIf="user.roles == 'ROLE_PATIENT'">{{'profileComponent.table.occupation' | translate}}</li>
+        <li class="list-group-item">{{'profileComponent.table.role' | translate}}</li>
+      </ul>
+    </div>
+    <div class="col-md-10">
+      <li class="list-group-item"><div *ngIf="user.email != null">{{user.email}} </div> <div *ngIf="user.email == null">No Data</div></li>
+      <li class="list-group-item">{{user.fullName}} <div *ngIf="user.fullName == null">No Data</div></li>
+      <li class="list-group-item">{{user.address}} <div *ngIf="user.address == null">No Data</div></li>
+      <li class="list-group-item">{{user.placeBirth}} <div *ngIf="user.placeBirth == null">No Data</div></li>
+      <li class="list-group-item">{{user.dateBirth}} *Year-Month-Date <div *ngIf="user.dateBirth == null">No Data</div></li>
+      <li class="list-group-item">{{user.phoneNumber}} <div *ngIf="user.phoneNumber == null">No Data</div></li>
+
+      <li class="list-group-item" *ngIf="user.roles == 'ROLE_ADMIN'">{{user.adminCode}}</li>
+      <li class="list-group-item" *ngIf="user.roles == 'ROLE_CLINIC'">{{user.userCode}}</li>
+      <li class="list-group-item" *ngIf="user.roles == 'ROLE_NURSE'">{{user.nurseCode}}</li>
+      <li class="list-group-item" *ngIf="user.roles == 'ROLE_DOCTOR'">{{user.doctorCode}}</li>
+      <li class="list-group-item" *ngIf="user.roles == 'ROLE_PATIENT'">{{user.patientCode}}</li>
+
+      <li class="list-group-item" *ngIf="user.roles == 'ROLE_NURSE'">{{user.sipp}} <div *ngIf="user.sipp == null">No Data</div></li>
+
+      <li class="list-group-item" *ngIf="user.roles == 'ROLE_PATIENT'">{{user.deviceCode}} <div *ngIf="user.deviceCode == null">No Data</div></li>
+
+      <li class="list-group-item">{{user.gender}} <div *ngIf="user.gender == null">No Data</div></li>
+      <li class="list-group-item">{{user.religion}} <div *ngIf="user.religion == null">No Data</div></li>
+      <li class="list-group-item">{{user.status.status}} <div *ngIf="user.status == null">No Data</div></li>
+      <li class="list-group-item">{{user.firstRegistrationDate}} *Year-Month-Date <div *ngIf="user.firstRegistrationDate == null">No Data</div></li>
+      <li class="list-group-item" *ngIf="user.roles != 'ROLE_ADMIN'">{{user.clinic.nameOfClinic}} <div *ngIf="user.clinic.nameOfClinic == null">No Data</div></li>
+      <li class="list-group-item" *ngIf="user.roles == 'ROLE_DOCTOR'">{{user.specialist}} <div *ngIf="user.specialist == null">No Data</div></li>
+      <li class="list-group-item" *ngIf="user.roles == 'ROLE_DOCTOR'">{{user.registerNumber}} <div *ngIf="user.registerNumber == null">No Data</div></li>
+      <li class="list-group-item" *ngIf="user.roles == 'ROLE_PATIENT'">{{user.occupation}} <div *ngIf="user.occupation == null">No Data</div></li>
+      <li class="list-group-item" >{{user.roles}}</li>
+    </div>
+  </div>
+
+  <br>
+
+  <div> <input type="submit" class="btn btn-primary" value="{{'profileComponent.button.changeData' | translate}}" (click)="gotoEditProfile(user)">
+    <input type="submit" class="btn btn-primary" value="{{'profileComponent.button.changePassword' | translate}}" (click)="gotoEditPassword(user)"></div>
+
+  <br>
+
+
+
+</div>
+</div>

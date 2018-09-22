@@ -1,0 +1,708 @@
+{
+  "navbar" : {
+    "adminPanel" : "Panel Admin",
+    "home" : "Beranda",
+    "language" : "Bahasa",
+    "listLanguage" : {
+      "english" : "Inggris",
+      "indonesia" : "Bahasa Indonesia",
+      "chinese" : "Cina (中文)",
+      "arabic" : "Arab (العربية)"
+    },
+    "profile" : "Profil",
+    "patientData" : "Data Pasien",
+    "transaction" : "Transaksi",
+    "doctorData" : "Data Dokter",
+    "nurseData" : "Data Perawat",
+    "clinicData" : "Data Klinik",
+    "ecgData": "Data EKG",
+    "logout" : "Keluar",
+    "login" : "Masuk",
+    "register" : "Buat Akun",
+    "dashboard" : "Dasbor",
+    "services": "Layanan",
+    "homecare" : "Homecare",
+    "team" : "Tim Kami",
+    "aboutUs" : "Tentang Kami",
+    "ourProduct" : "Produk Kami"
+  },
+  "patientComponent" : {
+    "headingTitle" : "Data Pasien",
+    "search" : {
+      "keyword" : "Kata Kunci",
+      "SortType" : "Tipe Urut",
+      "sortBased" : "Urut Berdasarkan",
+      "searchBase" : "Cari Berdasarkan",
+      "size" : "Ukuran",
+      "btnSearch" : "Cari",
+      "all" : "Semua",
+      "newPatient" : "Tambah Pasien Baru"
+    },
+    "table" : {
+      "header" : {
+        "no" : "No",
+        "patientCode" : "Kode Pasien",
+        "palceDOB" : "Tempat Tanggal Lahir",
+        "gender" : "Jenis Kelamin",
+        "email" : "Email",
+        "occupation" : "Pekerjaan",
+        "ecgCode" : "EKG Kode",
+        "clinic" : "Klinik",
+        "action" : "Aksi",
+        "name" : "Nama"
+      },
+      "btnAction" : {
+        "detail" : "Detil",
+        "edit" : "Ubah",
+        "delete" : "Hapus",
+        "ecg" : "Ekg"
+      }
+    },
+    "modal" : {
+      "title" : "Hapus Pasien",
+      "message"  : " akan di hapus, apakah anda yakin untuk meghapus dari daftar pasien ?",
+      "btnYes" : "Ya",
+      "btnNo" : "Tidak"
+    }
+  },
+  "doctorComponent" : {
+    "headingTitle" : "Data Dokter",
+    "search" : {
+      "keyword" : "Kata Kunci",
+      "SortType" : "Tipe Urut",
+      "sortBased" : "Urut Berdasarkan",
+      "searchBase" : "Cari Berdasarkan",
+      "size" : "Ukuran",
+      "btnSearch" : "Cari",
+      "all" : "Semua",
+      "newDoctor" : "Tambah Dokter Baru"
+    },
+    "table" : {
+      "header" : {
+        "no" : "No",
+        "doctorCode" : "Kode Dokter",
+        "palceDOB" : "Tempat Tanggal Lahir",
+        "gender" : "Jenis Kelamin",
+        "email" : "Email",
+        "registerNumber" : "No Ijin",
+        "clinic" : "Klinik",
+        "action" : "Aksi",
+        "name" : "Nama"
+      },
+      "btnAction" : {
+        "detail" : "Detil",
+        "edit" : "Ubah",
+        "delete" : "Hapus"
+      }
+    },
+    "modal" : {
+      "title" : "Hapus Dokter",
+      "message"  : " akan di hapus, apakah anda yakin untuk meghapus dari daftar dokter ?",
+      "btnYes" : "Ya",
+      "btnNo" : "Tidak"
+    }
+  },
+  "profileComponent" : {
+    "headingTitle" : "Profil Anda",
+    "table" : {
+      "email" : "Email",
+      "name" : "Nama",
+      "address" : "Alamat",
+      "placeOfBirth" : "Kota Lahir",
+      "dateOfBirth" : "Tanggal Lahir",
+      "phoneNumber" : "No Telepon",
+      "adminCode" : "Kode Admin",
+      "patientCode" : "Kode Pasien",
+      "nurseCode" : "Kode Perawat",
+      "doctorCode" : "Kode Dokter",
+      "userCode" : "Kode User",
+      "gender" : "Jenis Kelamin",
+      "religion" : "Agama",
+      "status" : "Status",
+      "registrationDate" : "Tanggal Daftar",
+      "role" : "Peranan",
+      "sipp" : "SIPP",
+      "ecgCode" : "Kode Ekg",
+      "registeredAtClinic" : "Terdaftar di Klinik",
+      "specialist" : "Spesialis",
+      "doctorRegisterNumber" : "No Ijin Praktek",
+      "occupation" : "Pekerjaan"
+    },
+    "button" : {
+      "changeData" : "Ubah Data",
+      "changePassword" : "Ubah Password"
+    }
+  },
+  "loginComponent" :{
+    "headerTitle" : "Login",
+    "email" : "Email",
+    "password" : "Kata Sandi",
+    "role" : "Masuk sebagai",
+    "btnLogin" : "Masuk"
+  },
+  "footerComponent" : {
+    "name" : "Sistem Pelayanan Kesehatan Homecare secara Digital"
+  },
+  "registerComponent" : {
+    "headerTitle" : "Formulir Pendaftaran",
+    "name" : "Nama",
+    "email" : "Email",
+    "password" : "Kata Sandi",
+    "role" : "Daftar Sebagai",
+    "atClinic" : "Di Klinik",
+    "linkAtClinic" : "Klik di sini untuk pendaftaran klinik/rumah sakit",
+    "verificationCode" : "Kode Verifikasi",
+    "btnSubmit" : "Daftar"
+  },
+  "homeComponent" : {
+    "header": "Sistem Pelayanan Kesehatan Homecare secara Digital",
+    "btnRegister" : "Buat Akun",
+    "btnLogin" : "Masuk",
+    "column1" : {
+      "title" : "Rekam Medik secara online",
+      "content" : "Rekam Medik online yang bisa diakses dari mana saja (dari website dan smartphone)"
+    },
+    "column2" : {
+      "title" : "Sistem EKG yang realtime",
+      "content" : "Memungkinkan untuk memantau ecg secara real time 24 jam dengan menggunakan perangkat EKG kecil yang disematkan pada pakaian Anda"
+    },
+    "column3" : {
+      "title" : "Kerjasama UM Bandung & ITB",
+      "content" : "Penelitian ini adalah kerja sama antara dua perguruan tinggi, yaitu Universitas Muhamadiyah Bandung (UMB) dan Institut Teknologi Bandung (ITB)"
+    }
+  },
+  "dashboardComponent" : {
+    "headerTitle" : "Dasbor",
+    "message" : "Selamat datang di dasbor Anda dan Anda dapat mengelola sesuai dengan peran Anda !"
+  },
+  "editProfileComponet" : {
+    "headerTitle" : "Ubah Data Profil Anda",
+    "email" : "Email",
+    "name" : "Nama",
+    "address" : "Alamat",
+    "placeOfBirth" : "Kota Lahir",
+    "dateOfBirth" : "Tanggal Lahir",
+    "phoneNumber" : "No Telepon",
+    "adminCode" : "Kode Admin",
+    "patientCode" : "Kode Pasien",
+    "nurseCode" : "Kode Perawat",
+    "doctorCode" : "Kode Dokter",
+    "userCode" : "Kode User",
+    "gender" : "Jenis Kelamin",
+    "religion" : "Agama",
+    "status" : "Status",
+    "registrationDate" : "Tanggal Daftar",
+    "role" : "Peranan",
+    "sipp" : "SIPP",
+    "ecgCode" : "Kode Ekg",
+    "registeredAtClinic" : "Terdaftar di Klinik",
+    "specialist" : "Spesialis",
+    "doctorRegisterNumber" : "No Ijin Praktek",
+    "occupation" : "Pekerjaan",
+    "btnSubmit" : "Ubah",
+    "btnBack" : "Kembali"
+  },
+  "editPasswordComponent" : {
+    "headerTitle" : "Ubah Kata Sandi Anda",
+    "oldPassword" : "Kata Sandi Lama",
+    "newPassword" : "Kata Sandi Baru",
+    "reTypePassword" : "Ketik Ulang Kata Sandi Baru",
+    "btnSubmit" : "Ubah",
+    "btnBack" : "Kembali"
+  },
+  "patientDetailsComponent" : {
+    "headerTitle" : "Data Detil Pasien",
+    "email" : "Email",
+    "name" : "Nama",
+    "address" : "Alamat",
+    "placeAndDateOfBirth" : "Tempat Tanggal Lahir",
+    "phoneNumber" : "No Telepon",
+    "patientCode" : "Kode Pasien",
+    "gender" : "Jenis Kelamin",
+    "religion" : "Agama",
+    "status" : "Status",
+    "registrationDate" : "Tanggal Mendaftar",
+    "role" : "Peranan",
+    "ecgCode" : "Kode Ekg",
+    "registeredAtClinic" : "Terdaftar di Klinik",
+    "occupation" : "Pekerjaan",
+    "btnBack" : "Kembali"
+  },
+  "patientEditComponent" : {
+    "headerTitle" : "Ubah Pasien",
+    "email" : "Email",
+    "name" : "Nama",
+    "address" : "Alamat",
+    "placeOfBirth" : "Tempat Lahir",
+    "dateOfBirth" : "Tanggal Lahir",
+    "phoneNumber" : "No Telepon",
+    "patientCode" : "Kode Pasien",
+    "gender" : "Jenis Kelamin",
+    "religion" : "Agama",
+    "status" : "Status",
+    "ecgCode" : "Kode Ekg",
+    "registeredAtClinic" : "Terdaftar di Klinik",
+    "occupation" : "Pekerjaan",
+    "btnSubmit" : "Ubah",
+    "btnBack" : "Kembali"
+  },
+  "patientAddComponent" : {
+    "headerTitle" : "Tambah Pasien Baru",
+    "email" : "Email",
+    "name" : "Nama",
+    "address" : "Alamat",
+    "placeOfBirth" : "Tempat Lahir",
+    "dateOfBirth" : "Tanggal Lahir",
+    "phoneNumber" : "No Telepon",
+    "patientCode" : "Kode Pasien",
+    "gender" : "Jenis Kelamin",
+    "religion" : "Agama",
+    "status" : "Status",
+    "ecgCode" : "Kode Ekg",
+    "registeredAtClinic" : "Terdaftar di Klinik",
+    "occupation" : "Pekerjaan",
+    "btnSubmit" : "Tambah",
+    "btnBack" : "Kembali",
+    "password" : "Kata Sandi"
+  },
+  "doctorDetailsComponent" : {
+    "headerTitle" : "Data Detil Dokter",
+    "email" : "Email",
+    "name" : "Nama",
+    "address" : "Alamat",
+    "placeAndDateOfBirth" : "Tempat Tanggal Lahir",
+    "phoneNumber" : "No Telepon",
+    "doctorCode" : "Kode Dokter",
+    "gender" : "Jenis Kelamin",
+    "religion" : "Agama",
+    "status" : "Status",
+    "registrationDate" : "Tanggal Mendaftar",
+    "role" : "Peranan",
+    "specialist" : "Spesialisasi",
+    "registeredAtClinic" : "Terdaftar di Klinik",
+    "registerNumber" : "No Ijin Praktek",
+    "btnBack" : "Kembali"
+  },
+  "doctorEditComponent" : {
+    "headerTitle" : "Ubah Pasien",
+    "email" : "Email",
+    "name" : "Nama",
+    "address" : "Alamat",
+    "placeOfBirth" : "Tempat Lahir",
+    "dateOfBirth" : "Tanggal Lahir",
+    "phoneNumber" : "No Telepon",
+    "doctorCode" : "Kode Dokter",
+    "gender" : "Jenis Kelamin",
+    "religion" : "Agama",
+    "status" : "Status",
+    "specialist" : "Spesialisasi",
+    "registeredAtClinic" : "Terdaftar di Klinik",
+    "registerNumber" : "No Ijin Praktek",
+    "btnSubmit" : "Ubah",
+    "btnBack" : "Kembali"
+  },
+  "nurseComponent" : {
+    "headingTitle" : "Data Perawat",
+    "search" : {
+      "keyword" : "Kata Kunci",
+      "SortType" : "Tipe Urut",
+      "sortBased" : "Urut Berdasarkan",
+      "searchBase" : "Cari Berdasarkan",
+      "size" : "Ukuran",
+      "btnSearch" : "Cari",
+      "all" : "Semua",
+      "newNurse" : "Tambah Perawat Baru"
+    },
+    "table" : {
+      "header" : {
+        "no" : "No",
+        "nurseCode" : "Kode Perawat",
+        "palceDOB" : "Tempat Tanggal Lahir",
+        "gender" : "Jenis Kelamin",
+        "email" : "Email",
+        "sipp" : "SIPP",
+        "clinic" : "Klinik",
+        "action" : "Aksi",
+        "name" : "Nama"
+      },
+      "btnAction" : {
+        "detail" : "Detil",
+        "edit" : "Ubah",
+        "delete" : "Hapus"
+      }
+    },
+    "modal" : {
+      "title" : "Hapus Perawat",
+      "message"  : " akan di hapus, apakah anda yakin untuk meghapus dari daftar Perawat ?",
+      "btnYes" : "Ya",
+      "btnNo" : "Tidak"
+    }
+  },
+  "nurseDetailsComponent" : {
+    "headerTitle" : "Data Detil Perawat",
+    "email" : "Email",
+    "name" : "Nama",
+    "address" : "Alamat",
+    "placeAndDateOfBirth" : "Tempat Tanggal Lahir",
+    "phoneNumber" : "No Telepon",
+    "nurseCode" : "Kode Perawat",
+    "gender" : "Jenis Kelamin",
+    "religion" : "Agama",
+    "status" : "Status",
+    "registrationDate" : "Tanggal Mendaftar",
+    "role" : "Peranan",
+    "registeredAtClinic" : "Terdaftar di Klinik",
+    "sipp" : "SIPP",
+    "btnBack" : "Kembali"
+  },
+  "nurseEditComponent" : {
+    "headerTitle" : "Ubah Perawat",
+    "email" : "Email",
+    "name" : "Nama",
+    "address" : "Alamat",
+    "placeOfBirth" : "Tempat Lahir",
+    "dateOfBirth" : "Tanggal Lahir",
+    "phoneNumber" : "No Telepon",
+    "nurseCode" : "Kode Perawat",
+    "gender" : "Jenis Kelamin",
+    "religion" : "Agama",
+    "status" : "Status",
+    "registeredAtClinic" : "Terdaftar di Klinik",
+    "sipp" : "SIPP",
+    "btnSubmit" : "Ubah",
+    "btnBack" : "Kembali"
+  },
+  "clinicComponent" : {
+    "headingTitle" : "Data User Admin Klinik",
+    "search" : {
+      "keyword" : "Kata Kunci",
+      "SortType" : "Tipe Urut",
+      "sortBased" : "Urut Berdasarkan",
+      "searchBase" : "Cari Berdasarkan",
+      "size" : "Ukuran",
+      "btnSearch" : "Cari",
+      "all" : "Semua",
+      "newClinic" : "Tambah Klinik Baru"
+    },
+    "table" : {
+      "header" : {
+        "no" : "No",
+        "userCode" : "Kode User",
+        "palceDOB" : "Tempat Tanggal Lahir",
+        "gender" : "Jenis Kelamin",
+        "email" : "Email",
+        "clinic" : "Klinik",
+        "action" : "Aksi",
+        "name" : "Nama"
+      },
+      "btnAction" : {
+        "detail" : "Detil",
+        "edit" : "Ubah",
+        "delete" : "Hapus"
+      }
+    },
+    "modal" : {
+      "title" : "Hapus User",
+      "message"  : " akan di hapus, apakah anda yakin untuk meghapus dari daftar user ?",
+      "btnYes" : "Ya",
+      "btnNo" : "Tidak"
+    }
+  },
+  "clinicDetailsComponent" : {
+    "headerTitle" : "Data Detil User",
+    "email" : "Email",
+    "name" : "Nama",
+    "address" : "Alamat",
+    "placeAndDateOfBirth" : "Tempat Tanggal Lahir",
+    "phoneNumber" : "No Telepon",
+    "userCode" : "Kode User",
+    "gender" : "Jenis Kelamin",
+    "religion" : "Agama",
+    "status" : "Status",
+    "registrationDate" : "Tanggal Mendaftar",
+    "role" : "Peranan",
+    "registeredAtClinic" : "Terdaftar di Klinik",
+    "btnBack" : "Kembali"
+  },
+  "clinicEditComponent" : {
+    "headerTitle" : "Ubah User",
+    "email" : "Email",
+    "name" : "Nama",
+    "address" : "Alamat",
+    "placeOfBirth" : "Tempat Lahir",
+    "dateOfBirth" : "Tanggal Lahir",
+    "phoneNumber" : "No Telepon",
+    "userCode" : "Kode User",
+    "gender" : "Jenis Kelamin",
+    "religion" : "Agama",
+    "status" : "Status",
+    "registeredAtClinic" : "Terdaftar di Klinik",
+    "btnSubmit" : "Ubah",
+    "btnBack" : "Kembali"
+  },
+  "ecgComponent" : {
+    "headingTitle" : "Grafik EKG",
+    "search" : {
+      "keyword" : "Tanggal",
+      "SortType" : "Tipe Urut",
+      "sortBased" : "Urut Berdasarkan",
+      "size" : "Ukuran",
+      "btnSearch" : "Lihat"
+    },
+    "btnBack" : "Kembali"
+  },
+  "unauthorizedComponent" : {
+    "message": "Maaf, Role yang anda miliki tidak diizinkan untuk membuka halaman ini !"
+  },
+  "trxComponent" : {
+    "headingTitle" : "Data Transaksi",
+    "search" : {
+      "keyword" : "Kata Kunci",
+      "SortType" : "Tipe Urut",
+      "sortBased" : "Urut Berdasarkan",
+      "searchBase" : "Cari Berdasarkan",
+      "size" : "Ukuran",
+      "btnSearch" : "Cari",
+      "all" : "Semua"
+    },
+    "table" : {
+      "header" : {
+        "no" : "No",
+        "orderNumber" : "No Pesanan",
+        "dateIn" : "Tanggal Pemesanan",
+        "address" : "Alamat Kunjungan",
+        "patientName" : "Nama Pasien",
+        "clinicName" : "Nama Klinik",
+        "action" : "Aksi",
+        "status" : "Status"
+      },
+      "btnAction" : {
+        "detail" : "Detil",
+        "edit" : "Ubah",
+        "delete" : "Hapus",
+        "assign" : "Penugasan"
+      }
+    },
+    "modal" : {
+      "title" : "Hapus Data Transaksi",
+      "message"  : " akan di hapus, apakah anda yakin untuk meghapus dari daftar transaksi ?",
+      "btnYes" : "Ya",
+      "btnNo" : "Tidak"
+    }
+  },
+  "trxDetailsComponent" : {
+    "headerTitle" : "Detil Transaksi",
+    "orderNumber" : "No Pesanan",
+    "patientName" : "Nama Pasien",
+    "patientCode" : "Kode Pasien",
+    "dateOrderIn" : "Tanggal Pemesanan",
+    "addressToVisit" : "Alamat Kunjungan",
+    "clinic" : "Klinik",
+    "status" : "Status Transaksi",
+    "dateTreatment" : "Tanggal Perawatan",
+    "predictionPrice" : "Harga Perkiraan",
+    "fixedPrice" : "Harga Tetap / Harga Final",
+    "paymentFixedPriceStatus" : "Status Pembayaran Harga Tetap / Harga Final",
+    "transactionType" : "Tipe Transaksi",
+    "listOfNurse" : "Daftar Perawat",
+    "listOfDoctor" : "Daftar Dokter",
+    "listOfServices" : "Daftar layanan yang dipesan",
+    "listOfVitalSign" : "Daftar Tanda Vital",
+    "btnSeeNurse" : "Lihat Perawat",
+    "btnSeeDoctor" : "Lihat Dokter",
+    "btnSeeServices" : "Lihat Layanan",
+    "btnSeeVitalSign" : "Lihat Tanda Vital",
+    "btnInputVitalSign" : "Masukkan Tanda Vital",
+    "btnBack" : "Kembali",
+    "modal" : {
+      "titleNurse" : "Daftar Perawat yang ditugaskan",
+      "titleDoctor" : "Daftar Dokter yang ditugaskan",
+      "titleServices" : "Daftar layanan yang dipesan",
+      "titleVitalSign" : "Daftar tanda vital",
+      "titleInputVitalSign" : "Masukkan tanda vital",
+      "btnClose" : "Tutup",
+      "btnInput" : "Masukkan",
+      "table" : {
+        "number" : "No",
+        "name" : "Nama",
+        "address" : "Alamat",
+        "phoneNumber" : "No Telepon",
+        "licenseNumber" : "No Ijin",
+        "specialist" : "Spesialis",
+        "price" : "Harga (IDR)",
+        "code" : "Kode",
+        "temperature" : "Suhu (Celcius)",
+        "sistol" : "Sistol (mmHg)",
+        "diastol" : "Diastol (mmHg)",
+        "heartBeat" : "Detak Jantung (BPM)",
+        "pulseOximetry" : "Kadar Oxigen darah (%)",
+        "respiratory" : "Pernapasan (x per menit)",
+        "total" : "Jumlah Total"
+      }
+    },
+    "medicine" : "Jenis Obat yang diberikan",
+    "nurseAction" : "Tindakan yang dilakukan perawat",
+    "diagnosis" : "Diagnosis"
+  },
+  "trxEditComponent" : {
+    "headerTitle": "Edit Data Transaksi",
+    "predictionPrice" : "Harga Prediksi *IDR",
+    "fixedPrice" : "Harga Tetap / Harga Final *IDR",
+    "status": "Status Transaksi",
+    "paymentFixedPriceStatus" : "Status Pembayaran Harga Tetap / Harga Final",
+    "dateTreatment" : "Tanggal Transaksi",
+    "remarkDiagnosis": "Diagnosis",
+    "remarkMedicine": "Obat-obatan",
+    "nurseAction" : "Tindakan yang dilakukan perawat",
+    "btnBack" : "Kembali",
+    "btnSubmit" : "Ubah"
+  },
+  "trxAssignComponent" : {
+    "search" : {
+      "keyword" : "Kata kunci mencari perawat",
+      "keywordDoctor" : "Kata kunci mencari dokter",
+      "SortType" : "Tipe Urut",
+      "sortBased" : "Urut Berdasarkan",
+      "searchBase" : "Cari Berdasarkan",
+      "size" : "Ukuran",
+      "btnSearch" : "Cari",
+      "btnClear" : "Reset",
+      "all" : "Cari Semua"
+    },
+    "headerTitle": "Penugasan Perawat dan Dokter",
+    "availableNurse" : "Perawat yang tersedia",
+    "availableDoctor" : "Dokter yang tersedia",
+    "patientName" : "Nama Pasien",
+    "patientCode" : "Kode Pasien",
+    "orderName" : "Nama Pemesan",
+    "dateTreatment" : "Tanggal Dilakukan tindakan",
+    "phoneNumber" : "No Telepon",
+    "listOfNurse" : "Daftar Perawat",
+    "listOfDoctor" : "Daftar Dokter",
+    "selectedNurse" : "Perawat Terpilih",
+    "selectedDoctor" : "Dokter Terpilih",
+    "nurseName" : "Nama Perawat",
+    "nurseCode" : "Kode Perawat",
+    "doctorName" : "Nama Dokter",
+    "doctorCode" : "Kode Dokter",
+    "nurseDetail" : "Detil Perawat",
+    "doctorDetail" : "Detil Dokter",
+    "str" : "No Ijin",
+    "choose" : "Pilih",
+    "action" : "Aksi",
+    "btnBack" : "Kembali",
+    "btnDetail" : "Detil",
+    "btnDelete" : "Hapus",
+    "modal" : {
+      "titleNurse" : "Detil Perawat",
+      "titleDoctor" : "Detil Dokter",
+      "btnClose" : "Tutup"
+    }
+  },
+  "nurseAddComponent" : {
+    "headerTitle" : "Tambah Perawat Baru",
+    "email" : "Email",
+    "name" : "Nama",
+    "address" : "Alamat",
+    "placeOfBirth" : "Tempat Lahir",
+    "dateOfBirth" : "Tanggal Lahir",
+    "phoneNumber" : "No Telepon",
+    "nurseCode" : "Kode Perawat",
+    "gender" : "Jenis Kelamin",
+    "religion" : "Agama",
+    "status" : "Status",
+    "sipp" : "No Ijin",
+    "registeredAtClinic" : "Terdaftar pada klinik",
+    "btnSubmit" : "Tambah",
+    "btnBack" : "Kembali",
+    "password" : "Password"
+  },
+  "doctorAddComponent" : {
+    "headerTitle" : "Tambah Dokter Baru",
+    "email" : "Email",
+    "name" : "Nama",
+    "address" : "Alamat",
+    "placeOfBirth" : "Tempat Lahir",
+    "dateOfBirth" : "Tanggal Lahir",
+    "phoneNumber" : "No Telepon",
+    "doctorCode" : "Kode Dokter",
+    "gender" : "Jenis Kelamin",
+    "religion" : "Agama",
+    "status" : "Status",
+    "registerNumber" : "No Ijin",
+    "specialist" : "Spesialis",
+    "registeredAtClinic" : "Terdaftar pada klinik",
+    "btnSubmit" : "Tambah",
+    "btnBack" : "Kembali",
+    "password" : "Password"
+  },
+  "clinicAddComponent" : {
+    "headerTitle" : "Tambah User Klinik Baru",
+    "email" : "Email",
+    "name" : "Nama",
+    "address" : "Alamat",
+    "placeOfBirth" : "Tempat Lahir",
+    "dateOfBirth" : "Tanggal Lahir",
+    "phoneNumber" : "No Telepon",
+    "userCode" : "User Dokter",
+    "gender" : "Jenis Kelamin",
+    "religion" : "Agama",
+    "status" : "Status",
+    "registeredAtClinic" : "Terdaftar pada klinik",
+    "btnSubmit" : "Tambah",
+    "btnBack" : "Kembali",
+    "password" : "Password",
+    "registeredAtClinic" : "Terdaftar di Klinik"
+  },
+  "servicesComponent" : {
+    "headerTitle" : "Daftar Layanan Homecare",
+    "search" : {
+      "keyword" : "Kata Kunci",
+      "SortType" : "Tipe Urut",
+      "sortBased" : "Urut Berdasarkan",
+      "searchBase" : "Cari Berdasarkan",
+      "size" : "Ukuran",
+      "btnSearch" : "Cari",
+      "all" : "Semua",
+      "newService" : "Tambah Layanan"
+    },
+    "table" : {
+      "header" : {
+        "no" : "No",
+        "serviceName" : "Nama Layanan",
+        "serviceCode" : "Kode Layanan",
+        "price" : "Harga (IDR)",
+        "clinic" : "Klinik",
+        "statusActive": "Status Keaktifan",
+        "action" : "Aksi"
+      },
+      "btnAction" : {
+        "edit" : "Ubah",
+        "delete" : "Hapus"
+      }
+    },
+    "modal" : {
+      "title" : "Hapus Layanan Homecare",
+      "message"  : " akan dihapus, apakah anda ingin menghapus dari daftar layanan homecare ?",
+      "btnYes" : "Ya",
+      "btnNo" : "Tidak"
+    }
+  },
+  "serviceEditComponent" : {
+    "headerTitle": "Ubah Layanan",
+    "nameOfServices" : "Nama Layanan",
+    "codeOfServices" : "Kode Layanan",
+    "price" : "Harga (IDR)",
+    "statusActive" : "Status Keaktifan",
+    "btnSubmit" : "Ubah",
+    "btnBack" : "Kembali"
+  },
+  "serviceAddComponent" : {
+    "headerTitle": "Tambah Layanan",
+    "nameOfServices" : "Nama Layanan",
+    "codeOfServices" : "Kode Layanan",
+    "price" : "Harga (IDR)",
+    "btnSubmit" : "Tambah",
+    "btnBack" : "Kembali"
+  }
+}

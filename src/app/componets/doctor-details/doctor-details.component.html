@@ -1,0 +1,93 @@
+<div class="col-sm-12" *ngIf="doctor">
+
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">{{'doctorDetailsComponent.headerTitle' | translate}} ( {{doctor.fullName}} )</h1>
+    </div>
+  </div>
+
+  <div align="center"><img src="{{doctor.photoPath}}" width="250" height="300"></div>
+  <br>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <table class="table table-hover">
+
+            <tr>
+              <td class="align-middle" width="250">{{'doctorDetailsComponent.doctorCode' | translate}}</td>
+              <td class="align-middle">{{doctor.doctorCode}}</td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'doctorDetailsComponent.name' | translate}}</td>
+              <td class="align-middle">{{doctor.fullName}}</td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'doctorDetailsComponent.placeAndDateOfBirth' | translate}}</td>
+              <td class="align-middle">{{doctor.placeBirth}}, {{convertDateTime(doctor.dateBirth)}}</td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'doctorDetailsComponent.gender' | translate}}</td>
+              <td class="align-middle">{{doctor.gender}}</td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'doctorDetailsComponent.email' | translate}}</td>
+              <td class="align-middle">{{doctor.email}}</td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'doctorDetailsComponent.phoneNumber' | translate}}</td>
+              <td class="align-middle">{{doctor.phoneNumber}}</td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'doctorDetailsComponent.address' | translate}}</td>
+              <td class="align-middle">{{doctor.address}}</td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'doctorDetailsComponent.religion' | translate}}</td>
+              <td class="align-middle">{{doctor.religion}}</td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'doctorDetailsComponent.registrationDate' | translate}}</td>
+              <td class="align-middle">{{convertDateTime(doctor.firstRegistrationDate)}}</td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'doctorDetailsComponent.status' | translate}}</td>
+              <td class="align-middle">{{doctor.status.status}}</td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'doctorDetailsComponent.registerNumber' | translate}}</td>
+              <td class="align-middle">{{doctor.registerNumber}}</td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'doctorDetailsComponent.specialist' | translate}}</td>
+              <td class="align-middle">{{doctor.specialist}}</td>
+            </tr>
+
+            <tr>
+              <td class="align-middle" width="250">{{'doctorDetailsComponent.registeredAtClinic' | translate}}</td>
+              <td class="align-middle">{{doctor.clinic.nameOfClinic}}</td>
+            </tr>
+
+          </table>
+
+          <input type="submit" class="btn btn-primary" value="{{'doctorDetailsComponent.btnBack' | translate}}" (click)="goBackMenu()">
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

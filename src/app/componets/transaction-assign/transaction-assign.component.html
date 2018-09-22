@@ -1,0 +1,307 @@
+<div *ngIf="orderObject">
+
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">{{'trxAssignComponent.headerTitle' | translate}}</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <table class="table table-hover">
+
+            <tr>
+              <td class="align-middle" width="250">{{'trxAssignComponent.patientName' | translate}}</td>
+              <td class="align-middle">{{orderObject.userPatient.fullName}}</td>
+            </tr>
+
+            <tr>
+              <td class="align-middle">{{'trxAssignComponent.patientCode' | translate}}</td>
+              <td class="align-middle">{{orderObject.userPatient.patientCode}}</td>
+            </tr>
+
+            <tr>
+              <td class="align-middle">{{'trxAssignComponent.dateTreatment' | translate}}</td>
+              <td class="align-middle">{{convertDateTime(orderObject.dateTreatementStart)}}</td>
+            </tr>
+
+            <tr>
+              <td class="align-middle">{{'trxAssignComponent.phoneNumber' | translate}}</td>
+              <td class="align-middle">{{orderObject.userPatient.phoneNumber}}</td>
+            </tr>
+
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+
+      <div class="col-md-2">
+        {{'trxAssignComponent.search.keyword' | translate}}
+        <input type="text" class="form-control" [(ngModel)]="filterValue">
+      </div>
+
+      <div class="col-md-2">
+        {{'trxAssignComponent.search.searchBase' | translate}}
+        <select class="form-control" [(ngModel)]="searchFieldSel" name="gendersel">
+          <option *ngFor="let sf of searchField;" [value]="sf.value">{{sf.name}}</option>
+        </select>
+      </div>
+
+      <div class="col-md-1">
+        {{'trxAssignComponent.search.size' | translate}}
+        <select class="form-control" [(ngModel)]="size" name="gendersel">
+          <option *ngFor="let sz of sizeOpt;" [value]="sz.value">{{sz.value}}</option>
+        </select>
+      </div>
+
+      <div class="col-md-1">
+        <label> </label>
+        <input type="button" value="{{'trxAssignComponent.search.btnSearch' | translate}}"   class="form-control" (click)="searchWithFilter()"/>
+      </div>
+
+      <div class="col-md-1">
+        <label> </label>
+        <input type="button" value="{{'trxAssignComponent.search.btnClear' | translate}}"   class="form-control" (click)="clearForm()"/>
+      </div>
+
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="panel panel-default">
+        <div class="panel-heading"></div><br>
+        <div class="panel-body">
+
+          <table class="table table-hover">
+            <tr class="table-info">
+              <th>{{'trxAssignComponent.nurseName' | translate}}</th>
+              <th>{{'trxAssignComponent.nurseCode' | translate}}</th>
+              <th>{{'trxAssignComponent.str' | translate}}</th>
+              <th>{{'trxAssignComponent.nurseDetail' | translate}}</th>
+              <th>{{'trxAssignComponent.choose' | translate}}</th>
+            </tr>
+
+            <tr *ngFor="let record1 of nurseList;">
+              <td class="align-middle">{{record1.fullName}}</td>
+              <td class="align-middle">{{record1.nurseCode}}</td>
+              <td class="align-middle">{{record1.sipp}}</td>
+              <td class="align-middle"><label class="btn btn-info" (click)="openModalDetailNurse('detailNurse',record1)">{{'trxAssignComponent.btnDetail' | translate}}</label></td>
+              <td class="align-middle">
+                <input type="checkbox"
+                       (change)="record1.readysubmit = !record1.readysubmit;onSubmitNurseItem(record1);"
+                       [checked]="record1.readysubmit"/>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">{{'trxAssignComponent.selectedNurse' | translate}}</div>
+        <div class="panel-body">
+          <table class="table table-hover">
+            <tr class="table-info">
+              <th>{{'trxAssignComponent.nurseName' | translate}}</th>
+              <th>{{'trxAssignComponent.nurseCode' | translate}}</th>
+              <th>{{'trxAssignComponent.str' | translate}}</th>
+              <th>{{'trxAssignComponent.action' | translate}}</th>
+            </tr>
+            <tr *ngFor="let record2 of nurseSelectedObject;">
+              <td class="align-middle">{{record2.idNurse.fullName}}</td>
+              <td class="align-middle">{{record2.idNurse.nurseCode}}</td>
+              <td class="align-middle">{{record2.idNurse.sipp}}</td>
+              <td>
+                <div class="btn-group-vertical btn-group-xs align-middle">
+                  <input type="button" value="{{'trxAssignComponent.btnDelete' | translate}}" class="btn btn-warning"
+                         (click)="deleteAssignedNurse(record2)"/>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <br>
+
+  <div class="row">
+
+    <div class="col-md-2">
+      {{'trxAssignComponent.search.keywordDoctor' | translate}}
+      <input type="text" class="form-control" [(ngModel)]="filterValueDoctor">
+    </div>
+
+    <div class="col-md-2">
+      {{'trxAssignComponent.search.searchBase' | translate}}
+      <select class="form-control" [(ngModel)]="searchFieldSelDoctor" name="gendersel">
+        <option *ngFor="let sf of searchFieldDoctor;" [value]="sf.value">{{sf.name}}</option>
+      </select>
+    </div>
+
+    <div class="col-md-1">
+      {{'trxAssignComponent.search.size' | translate}}
+      <select class="form-control" [(ngModel)]="size" name="gendersel">
+        <option *ngFor="let sz of sizeOpt;" [value]="sz.value">{{sz.value}}</option>
+      </select>
+    </div>
+
+    <div class="col-md-1">
+      <label> </label>
+      <input type="button" value="{{'trxAssignComponent.search.btnSearch' | translate}}"   class="form-control" (click)="searchWithFilterDoctor()"/>
+    </div>
+
+    <div class="col-md-1">
+      <label> </label>
+      <input type="button" value="{{'trxAssignComponent.search.btnClear' | translate}}"   class="form-control" (click)="clearFormDoctor()"/>
+    </div>
+
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="panel panel-default">
+        <div class="panel-heading"></div><br>
+        <div class="panel-body">
+
+          <table class="table table-hover">
+            <tr class="table-info">
+              <th>{{'trxAssignComponent.doctorName' | translate}}</th>
+              <th>{{'trxAssignComponent.doctorCode' | translate}}</th>
+              <th>{{'trxAssignComponent.str' | translate}}</th>
+              <th>{{'trxAssignComponent.doctorDetail' | translate}}</th>
+              <th>{{'trxAssignComponent.choose' | translate}}</th>
+            </tr>
+
+            <tr *ngFor="let record1 of doctorList;">
+              <td class="align-middle">{{record1.fullName}}</td>
+              <td class="align-middle">{{record1.doctorCode}}</td>
+              <td class="align-middle">{{record1.registerNumber}}</td>
+              <td class="align-middle"><label class="btn btn-info" (click)="openModalDetailDoctor('detailDoctor',record1)">{{'trxAssignComponent.btnDetail' | translate}}</label></td>
+              <td class="align-middle">
+                <input type="checkbox"
+                       (change)="record1.readysubmit = !record1.readysubmit;onSubmitDoctorItem(record1);"
+                       [checked]="record1.readysubmit"/>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">{{'trxAssignComponent.selectedDoctor' | translate}}</div>
+        <div class="panel-body">
+          <table class="table table-hover">
+            <tr class="table-info">
+              <th>{{'trxAssignComponent.doctorName' | translate}}</th>
+              <th>{{'trxAssignComponent.doctorCode' | translate}}</th>
+              <th>{{'trxAssignComponent.str' | translate}}</th>
+              <th>{{'trxAssignComponent.action' | translate}}</th>
+            </tr>
+            <tr *ngFor="let record2 of doctorSelectedObject;">
+              <td class="align-middle">{{record2.idDoctor.fullName}}</td>
+              <td class="align-middle">{{record2.idDoctor.doctorCode}}</td>
+              <td class="align-middle">{{record2.idDoctor.registerNumber}}</td>
+              <td>
+                <div class="btn-group-vertical btn-group-xs align-middle">
+                  <input type="button" value="{{'trxAssignComponent.btnDelete' | translate}}" class="btn btn-warning"
+                         (click)="deleteAssignedDoctor(record2)"/>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <input type="submit" class="btn btn-primary" value="{{'trxAssignComponent.btnBack' | translate}}" (click)="goBackMenu()">
+
+</div>
+
+
+<modal id="detailNurse" class="modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">{{'trxAssignComponent.modal.titleNurse' | translate}}</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" *ngIf="detailNurseObject">
+        <div class="panel-body">
+          <div class="col-md-12">
+            {{detailNurseObject.fullName}} <br>
+            {{detailNurseObject.nurseCode}} <br>
+            {{detailNurseObject.address}} <br>
+            {{detailNurseObject.phoneNumber}} <br>
+            {{detailNurseObject.sipp}} <br>
+            {{detailNurseObject.email}} <br>
+            {{detailNurseObject.placeBirth}}, {{convertDateTime(detailNurseObject.dateBirth)}} <br>
+            {{detailNurseObject.gender}} <br>
+            {{detailNurseObject.religion}} <br>
+            {{detailNurseObject.status.status}} <br>
+            {{detailNurseObject.clinic.nameOfClinic}}
+
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">{{'trxAssignComponent.modal.btnClose' | translate}}</button>
+      </div>
+    </div>
+  </div>
+</modal>
+
+
+<modal id="detailDoctor" class="modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">{{'trxAssignComponent.modal.titleDoctor' | translate}}</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" *ngIf="detailDoctorObject">
+        <div class="panel-body">
+          <div class="col-md-12">
+            {{detailDoctorObject.fullName}} <br>
+            {{detailDoctorObject.doctorCode}} <br>
+            {{detailDoctorObject.address}} <br>
+            {{detailDoctorObject.phoneNumber}} <br>
+            {{detailDoctorObject.registerNumber}} <br>
+            {{detailDoctorObject.email}} <br>
+            {{detailDoctorObject.placeBirth}}, {{convertDateTime(detailDoctorObject.dateBirth)}} <br>
+            {{detailDoctorObject.gender}} <br>
+            {{detailDoctorObject.religion}} <br>
+            {{detailDoctorObject.status.status}} <br>
+            {{detailDoctorObject.clinic.nameOfClinic}}
+
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">{{'trxAssignComponent.modal.btnClose' | translate}}</button>
+      </div>
+    </div>
+  </div>
+</modal>
