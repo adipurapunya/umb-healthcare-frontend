@@ -49,17 +49,18 @@ export class ConstantvariablesService {
 
   getPagesOption() {
     let opt = [
-      {'id': 1, 'value': 10},
-      {'id': 2, 'value': 15},
-      {'id': 3, 'value': 20},
-      {'id': 4, 'value': 25},
-      {'id': 5, 'value': 30},
-      {'id': 6, 'value': 35},
-      {'id': 7, 'value': 40},
-      {'id': 8, 'value': 45},
-      {'id': 9, 'value': 50},
-      {'id': 10, 'value': 100},
-      {'id': 11, 'value': 200}
+      {'id': 1, 'value': 5},
+      {'id': 2, 'value': 10},
+      {'id': 3, 'value': 15},
+      {'id': 4, 'value': 20},
+      {'id': 5, 'value': 25},
+      {'id': 6, 'value': 30},
+      {'id': 7, 'value': 35},
+      {'id': 8, 'value': 40},
+      {'id': 9, 'value': 45},
+      {'id': 10, 'value': 50},
+      {'id': 11, 'value': 100},
+      {'id': 12, 'value': 200}
     ];
     return opt;
   }
@@ -175,6 +176,25 @@ export class ConstantvariablesService {
       {'id': 3, 'name': 'User Id', 'value': 'id'}
     ];
     return clinicField;
+  }
+
+  // =================
+
+  getListClinicField() {
+    let listClinicField = [
+      {'id': 1, 'name': 'Clinic Name', 'value': 'nameOfClinic'},
+      {'id': 2, 'name': 'Clinic Code', 'value': 'codeOfClinic'}
+    ];
+    return listClinicField;
+  }
+
+  getListClinicSortField() {
+    let listClinicField = [
+      {'id': 1, 'name': 'Clinic Name', 'value': 'nameOfClinic'},
+      {'id': 2, 'name': 'Clinic Code', 'value': 'codeOfClinic'},
+      {'id': 3, 'name': 'Id', 'value': 'id'}
+    ];
+    return listClinicField;
   }
 
   // =================

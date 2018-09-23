@@ -82,7 +82,7 @@ export class ClinicAddComponent implements OnInit {
   }
 
   goBackMenu(){
-    this.router.navigate(['clinicData']);
+    this.router.navigate(['userClinicData']);
   }
 
   getClinicList(){

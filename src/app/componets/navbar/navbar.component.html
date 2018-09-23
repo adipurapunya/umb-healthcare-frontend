@@ -56,9 +56,20 @@
         (authService.getRole() == 'ROLE_ADMIN' || authService.getRole() == 'ROLE_CLINIC')"
             [routerLinkActive] = "['active']" [routerLinkActiveOptions]= "{exact:true}"> <a class="nav-link" [routerLink]="['/nurseData']">{{'navbar.nurseData' | translate}}</a></li>
 
+        <!--
         <li class="nav-item" *ngIf="authService.loggedIn() &&
         (authService.getRole() == 'ROLE_ADMIN')"
             [routerLinkActive] = "['active']" [routerLinkActiveOptions]= "{exact:true}"> <a class="nav-link" [routerLink]="['/clinicData']">{{'navbar.clinicData' | translate}}</a></li>
+        -->
+
+        <li class="nav-item dropdown" *ngIf="authService.loggedIn() && (authService.getRole() == 'ROLE_ADMIN')"
+            [routerLinkActive] = "['active']" [routerLinkActiveOptions]= "{exact:true}">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">{{'navbar.clinic' | translate}}</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" [routerLink]="['/clinicList']">{{'navbar.listOfClinic' | translate}}</a>
+            <a class="dropdown-item" [routerLink]="['/userClinicData']">{{'navbar.listOfUserClinic' | translate}}</a>
+          </div>
+        </li>
 
 
         <li class="nav-item" *ngIf="authService.loggedIn() &&

@@ -14,7 +14,9 @@
     "transaction" : "Trx",
     "doctorData" : "Doctor Data",
     "nurseData" : "Nurse Data",
-    "clinicData" : "Clinic Data",
+    "clinic" : "Clinic",
+    "listOfClinic" : "List of Clinic",
+    "listOfUserClinic" : "List of User each Clinic",
     "ecgData": "ECG Data",
     "logout" : "Logout",
     "login" : "Login",
@@ -373,7 +375,7 @@
     "btnBack" : "Back"
   },
   "clinicComponent" : {
-    "headingTitle" : "Clinic Data",
+    "headingTitle" : "User Clinic Data",
     "search" : {
       "keyword" : "Keyword",
       "SortType" : "Sort Type",
@@ -382,7 +384,7 @@
       "size" : "Size Per Page",
       "btnSearch" : "Search",
       "all" : "All",
-      "newClinic" : "New Clinic"
+      "newClinic" : "New User Clinic"
     },
     "table" : {
       "header" : {
@@ -704,5 +706,40 @@
     "price" : "Price (IDR)",
     "btnSubmit" : "Submit",
     "btnBack" : "Back"
+  },
+  "clinicListComponent" : {
+    "headingTitle" : "List of Clinic",
+    "search" : {
+      "keyword" : "Keyword",
+      "SortType" : "Sort Type",
+      "sortBased" : "Sort Based",
+      "searchBase" : "Search Based",
+      "size" : "Size Per Page",
+      "btnSearch" : "Search",
+      "all" : "All",
+      "newClinic" : "New Clinic"
+    },
+    "table" : {
+      "header" : {
+        "no" : "No",
+        "nameOfClinic" : "Clinic Name",
+        "codeOfClinic" : "Clinic Code",
+        "address" : "Address",
+        "status" : "Status",
+        "statusActive" : "Status Active",
+        "action" : "Action"
+      },
+      "btnAction" : {
+        "detail" : "Detail",
+        "edit" : "Edit",
+        "delete" : "Delete"
+      }
+    },
+    "modal" : {
+      "title" : "Delete Clinic",
+      "message"  : " will be deleted, Are you sure want to delete this clinic from clinic list ?",
+      "btnYes" : "Yes",
+      "btnNo" : "No"
+    }
   }
 }

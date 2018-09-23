@@ -71,7 +71,7 @@ export class ClinicEditComponent implements OnInit {
   }
 
   goBackMenu(){
-    this.router.navigate(['clinicData']);
+    this.router.navigate(['userClinicData']);
   }
 
   onEditSubmit() {
@@ -94,7 +94,7 @@ export class ClinicEditComponent implements OnInit {
     this.clinicSvc.editClinic(updateItem, this.clinic.id).subscribe(data => {
 
       this.flashMessage.show('user clinic has been successful updated !', {cssClass: 'alert-success', timeout: 3000});
-      this.router.navigate(['clinicData']);
+      this.router.navigate(['userClinicData']);
     }, error => {
       if(error.status == 401){
         this.flashMessage.show('Your role is unauthorized to delete data !', {cssClass: 'alert-danger', timeout: 3000});

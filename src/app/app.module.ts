@@ -69,6 +69,11 @@ import { AboutusComponent } from './componets/homecare/aboutus/aboutus.component
 import {ServicesService} from "./services/services.service";
 import { ServicesEditComponent } from './componets/services-edit/services-edit.component';
 import { ServicesAddComponent } from './componets/services-add/services-add.component';
+import { ClinicListComponent } from './componets/clinic-list/clinic-list.component';
+import {ListclinicService} from "./services/listclinic.service";
+import { ClinicListEditComponent } from './componets/clinic-list-edit/clinic-list-edit.component';
+import { ClinicListAddComponent } from './componets/clinic-list-add/clinic-list-add.component';
+import { ClinicListDetailsComponent } from './componets/clinic-list-details/clinic-list-details.component';
 //import { SidebarComponent } from './componets/sidebar/sidebar.component';
 
 //import { MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
@@ -134,19 +139,35 @@ const appRoutes: Routes = [
     data: { roles: ['ROLE_ADMIN', 'ROLE_CLINIC'] }
   },
   {
-    path:'clinicData', component: ClinicComponent, canActivate:[AuthGuard],
+    path:'clinicList', component: ClinicListComponent, canActivate:[AuthGuard],
     data: { roles: ['ROLE_ADMIN'] }
   },
   {
-    path:'clinicDetails', component: ClinicDetailsComponent, canActivate:[AuthGuard],
+    path:'clinicListEdit', component: ClinicListEditComponent, canActivate:[AuthGuard],
     data: { roles: ['ROLE_ADMIN'] }
   },
   {
-    path: 'clinicEdit', component: ClinicEditComponent, canActivate: [AuthGuard],
+    path:'clinicListAdd', component: ClinicListAddComponent, canActivate:[AuthGuard],
+    data: { roles: ['ROLE_ADMIN'] }
+  },
+  {
+    path:'clinicListDetails', component: ClinicListDetailsComponent, canActivate:[AuthGuard],
+    data: { roles: ['ROLE_ADMIN'] }
+  },
+  {
+    path:'userClinicData', component: ClinicComponent, canActivate:[AuthGuard],
+    data: { roles: ['ROLE_ADMIN'] }
+  },
+  {
+    path:'userClinicDetails', component: ClinicDetailsComponent, canActivate:[AuthGuard],
+    data: { roles: ['ROLE_ADMIN'] }
+  },
+  {
+    path: 'userClinicEdit', component: ClinicEditComponent, canActivate: [AuthGuard],
     data: {roles: ['ROLE_ADMIN']}
   },
   {
-    path:'clinicAdd', component: ClinicAddComponent, canActivate:[AuthGuard],
+    path:'userClinicAdd', component: ClinicAddComponent, canActivate:[AuthGuard],
     data: { roles: ['ROLE_ADMIN', 'ROLE_CLINIC'] }
   },
   {
@@ -226,7 +247,11 @@ const appRoutes: Routes = [
     TeamComponent,
     AboutusComponent,
     ServicesEditComponent,
-    ServicesAddComponent
+    ServicesAddComponent,
+    ClinicListComponent,
+    ClinicListEditComponent,
+    ClinicListAddComponent,
+    ClinicListDetailsComponent
     //SidebarComponent
   ],
   imports: [
@@ -281,6 +306,7 @@ const appRoutes: Routes = [
   providers: [ValidateService, AuthService, AuthGuard, ProfileService,
     DatatransferService, ConstantvariablesService,
     PatientService, ModalService, UtilityService, EcgService, DoctorService, NurseService, ClinicService, TransactionService, ServicesService,
+    ListclinicService,
     {provide: HTTP_INTERCEPTORS, useClass: Interceptor, multi: true}
   ],
   bootstrap: [AppComponent]

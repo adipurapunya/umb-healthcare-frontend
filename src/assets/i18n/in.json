@@ -14,7 +14,9 @@
     "transaction" : "Transaksi",
     "doctorData" : "Data Dokter",
     "nurseData" : "Data Perawat",
-    "clinicData" : "Data Klinik",
+    "clinic" : "Klinik",
+    "listOfClinic" : "Daftar Klinik",
+    "listOfUserClinic" : "Daftar User Setiap Klinik",
     "ecgData": "Data EKG",
     "logout" : "Keluar",
     "login" : "Masuk",
@@ -373,7 +375,7 @@
     "btnBack" : "Kembali"
   },
   "clinicComponent" : {
-    "headingTitle" : "Data User Admin Klinik",
+    "headingTitle" : "Data User Klinik",
     "search" : {
       "keyword" : "Kata Kunci",
       "SortType" : "Tipe Urut",
@@ -382,7 +384,7 @@
       "size" : "Ukuran",
       "btnSearch" : "Cari",
       "all" : "Semua",
-      "newClinic" : "Tambah Klinik Baru"
+      "newClinic" : "Tambah User Klinik Baru"
     },
     "table" : {
       "header" : {

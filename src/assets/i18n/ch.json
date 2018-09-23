@@ -14,7 +14,9 @@
     "transaction" : "交易",
     "doctorData" : "医生数据",
     "nurseData" : "护士数据",
-    "clinicData" : "诊所数据",
+    "clinic" : "诊所",
+    "listOfClinic" : "诊所一览",
+    "listOfUserClinic" : "每个诊所的用户列表",
     "ecgData": "心电数据",
     "logout" : "登出",
     "login" : "登录",
@@ -373,7 +375,7 @@
     "btnBack" : "背部"
   },
   "clinicComponent" : {
-    "headingTitle" : "患者数据",
+    "headingTitle" : "用户诊所数据",
     "search" : {
       "keyword" : "关键词",
       "SortType" : "排序类型",
@@ -382,7 +384,7 @@
       "size" : "每页大小",
       "btnSearch" : "搜索",
       "all" : "所有",
-      "newClinic" : "新诊所"
+      "newClinic" : "新用户诊所"
     },
     "table" : {
       "header" : {

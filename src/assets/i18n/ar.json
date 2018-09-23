@@ -14,7 +14,9 @@
     "transaction" : "عملية تجارية",
     "doctorData" : "بيانات الطبيب",
     "nurseData" : "بيانات الممرضة",
-    "clinicData" : "بيانات العيادة",
+    "clinic" : "عيادة",
+    "listOfClinic" : "قائمة العيادة",
+    "listOfUserClinic" : "قائمة المستخدم كل عيادة",
     "ecgData": "بيانات تخطيط القلب",
     "logout" : "الخروج",
     "login" : "تسجيل الدخول",
@@ -374,7 +376,7 @@
     "btnBack" : "الى الخلف"
   },
   "clinicComponent" : {
-    "headingTitle" : "بيانات المريض",
+    "headingTitle" : "بيانات عيادة المستخدم",
     "search" : {
       "keyword" : "الكلمة",
       "SortType" : "نوع الفرز",
@@ -383,7 +385,7 @@
       "size" : "بحجم",
       "btnSearch" : "بحث",
       "all" : "الكل",
-      "newClinic" : "عيادة جديدة"
+      "newClinic" : "عيادة العضو الجديدة"
     },
     "table" : {
       "header" : {

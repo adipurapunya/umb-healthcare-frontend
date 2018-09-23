@@ -27,7 +27,7 @@ export class ClinicDetailsComponent implements OnInit {
   }
 
   goBackMenu(){
-    this.router.navigate(['clinicData']);
+    this.router.navigate(['userClinicData']);
   }
 
 }

@@ -63,7 +63,7 @@ export class TransactionComponent implements OnInit {
     this.sortParam = this.constantService.getTrxSortField();
     this.sortParamSel = 'id';
     this.page = 0;
-    this.size = 10;
+    this.size = 5;
     this.getTransactionList();
     this.dist = false;
     this.currentUser = this.getCurrentUser();

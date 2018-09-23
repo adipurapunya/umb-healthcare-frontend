@@ -116,7 +116,7 @@ export class ClinicComponent implements OnInit {
           this.stopProgress();
         }, error => {
           if (error.status == 401) {
-            this.flashMessage.show('Your role is unauthorized to delete data !', {
+            this.flashMessage.show('Your role is unauthorized to see data !', {
               cssClass: 'alert-danger',
               timeout: 3000
             });
@@ -130,7 +130,7 @@ export class ClinicComponent implements OnInit {
           this.stopProgress();
         }, error => {
           if (error.status == 401) {
-            this.flashMessage.show('Your role is unauthorized to delete data !', {
+            this.flashMessage.show('Your role is unauthorized to see data !', {
               cssClass: 'alert-danger',
               timeout: 3000
             });
@@ -146,7 +146,7 @@ export class ClinicComponent implements OnInit {
           this.stopProgress();
         }, error => {
           if (error.status == 401) {
-            this.flashMessage.show('Your role is unauthorized to delete data !', {
+            this.flashMessage.show('Your role is unauthorized to see data !', {
               cssClass: 'alert-danger',
               timeout: 3000
             });
@@ -160,7 +160,7 @@ export class ClinicComponent implements OnInit {
           this.stopProgress();
         }, error => {
           if (error.status == 401) {
-            this.flashMessage.show('Your role is unauthorized to delete data !', {
+            this.flashMessage.show('Your role is unauthorized to see data !', {
               cssClass: 'alert-danger',
               timeout: 3000
             });
@@ -176,7 +176,7 @@ export class ClinicComponent implements OnInit {
       //console.log(data);
       this.flashMessage.show('Success delete user clinic data !', {cssClass: 'alert-success', timeout: 3000});
       this.getClinicList();
-      this.router.navigate(['clinicData']);
+      this.router.navigate(['userClinicData']);
     }, error => {
       //console.log(error.status);
       if(error.status == 401){
@@ -186,7 +186,7 @@ export class ClinicComponent implements OnInit {
         this.flashMessage.show('failed update user clinic !', {cssClass: 'alert-danger', timeout: 3000});
       }
       this.getClinicList();
-      this.router.navigate(['clinicData']);
+      this.router.navigate(['userClinicData']);
     });
   }
 
@@ -201,12 +201,12 @@ export class ClinicComponent implements OnInit {
 
   gotoEditClinic(item: any) {
     this.dataTransferService.setDataTransfer(item);
-    this.router.navigate(['clinicEdit']);
+    this.router.navigate(['userClinicEdit']);
   }
 
   goToClinicDetail(clinic: Object) {
     this.dataTransferService.setDataTransfer(clinic);
-    this.router.navigate(['clinicDetails']);
+    this.router.navigate(['userClinicDetails']);
   }
 
   convertDateTime(date: number) {
@@ -214,8 +214,7 @@ export class ClinicComponent implements OnInit {
   }
 
   goToAddClinic(){
-    //this.dataTransferService.setDataTransfer(patient);
-    this.router.navigate(['clinicAdd']);
+    this.router.navigate(['userClinicAdd']);
   }
 
 }
