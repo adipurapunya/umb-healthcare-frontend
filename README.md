@@ -1,5 +1,4 @@
-# AngularSrc
-
+# Angular 5 Homecare Website
 This project was developed by using Angular 5
 
 ## Development server
